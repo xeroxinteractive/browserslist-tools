@@ -1,14 +1,10 @@
 {
     "compilerOptions": {
-        "module": "ES2015",
+        "module": "commonjs",
         "noImplicitAny": true,
-        "outDir": "./build",
-        "sourceMap": true,
-        "declaration": true
+        "declaration": true,
+        "resolveJsonModule": true,
     },
-    "include": [
-        "./source/index.ts"
-    ],
     "exclude": [
         "node_modules"
     ]
