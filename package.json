@@ -1,0 +1,15 @@
+{
+  "name": "browserslist-browserstack",
+  "version": "1.0.0",
+  "description": "Filter available BrowserStack capabilities with a browserslist query.",
+  "main": "build/index.js",
+  "repository": "git@github.com:xeroxinteractive/browserslist-browserstack.git",
+  "author": "Andrew Leedham <AndrewLeedham@Outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  }
+}

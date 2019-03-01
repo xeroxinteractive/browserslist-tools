@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "ES2015",
+        "noImplicitAny": true,
+        "outDir": "./build",
+        "sourceMap": true,
+        "declaration": true
+    },
+    "include": [
+        "./source/index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
