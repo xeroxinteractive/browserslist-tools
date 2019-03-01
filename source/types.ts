@@ -10,7 +10,7 @@ export interface Filters<T> {
 export interface Options {
     username?: string;
     accessKey?: string;
-    browserslist: {
+    browserslist?: {
         queries?: Queries;
         opts?: BrowsersListOptions
     },
@@ -37,5 +37,5 @@ export enum OperatingSystemFilter {
 }
 
 export enum BrowserFilter {
-    Firefox = 'Firefox', Safari = 'Safari', IE = 'IE', Chrome = 'Chrome', Opera = 'Opera', Edge = 'Edge'
+    Firefox = 'firefox', Safari = 'safari', IE = 'ie', Chrome = 'chrome', Opera = 'opera', Edge = 'edge'
 }
