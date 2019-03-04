@@ -26,6 +26,7 @@ export interface Browser {
 export interface Capability extends Browser {
     os: string;
     os_version: string;
+    browser: string;
     browser_version: string | null;
     device: string | null;
     real_mobile: boolean | null;
