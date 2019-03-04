@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`capability retrival 1`] = `
+exports[`getAllCapabilities 1`] = `
 Array [
   Object {
     "browser": "opera",
