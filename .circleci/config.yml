@@ -16,6 +16,7 @@ jobs:
       - run: yarn install
       - run: yarn audit
       - run: yarn lint
+      - run: yarn type-check
       - run: yarn test
       - save_cache:
           paths:
