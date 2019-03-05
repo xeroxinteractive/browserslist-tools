@@ -9,7 +9,7 @@ describe('getCapabilities', () => {
                 }
             })).resolves.toMatchSnapshot();
         });
-        test.skip('IE 10 + Windows 7 OS filter', async() => {
+        test('IE 10 + Windows 7 OS filter', async() => {
             await expect(moduleUnderTest.default({
                 browserslist: {
                     queries: 'IE 10'
@@ -17,6 +17,11 @@ describe('getCapabilities', () => {
                 operatingSystems: {
                     include: [
                         moduleUnderTest.OperatingSystemFilter.WINDOWS
+                    ]
+                },
+                operatingSystemVersion: {
+                    include: [
+                         moduleUnderTest.WindowsOperatingSystemVersionFilter.SEVEN
                     ]
                 }
             })).resolves.toMatchSnapshot();

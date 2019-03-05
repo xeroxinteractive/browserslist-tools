@@ -9,8 +9,8 @@ export default async function getCapabilities(options?: Options): Promise<Capabi
         const [browser, browser_version] = browserString.split(' ');
         return {browser, browser_version: (!browser_version.includes('.') && !isNaN(parseFloat(browser_version))) ? `${browser_version}.0` : browser_version};
     });
-    
+
     return filterCapabilities(allCapabilities, allSupportedBrowsers, options);
 }
 
-export { BrowserFilter, OperatingSystemFilter, Options } from './types';
+export { BrowserFilter, OperatingSystemFilter, Options, OSXOperatingSystemVersionFilter, WindowsOperatingSystemVersionFilter } from './types';

@@ -15,7 +15,8 @@ export interface Options {
         opts?: BrowsersListOptions
     },
     browsers?: Filters<BrowserFilter>,
-    operatingSystems?: Filters<OperatingSystemFilter>
+    operatingSystems?: Filters<OperatingSystemFilter>,
+    operatingSystemVersion?: Filters<WindowsOperatingSystemVersionFilter> | Filters<OSXOperatingSystemVersionFilter>
 }
 
 export interface Browser {
@@ -35,6 +36,26 @@ export interface Capability extends Browser {
 export enum OperatingSystemFilter {
     WINDOWS = 'WINDOWS',
     OSX = 'OS X'
+}
+
+export enum WindowsOperatingSystemVersionFilter {
+  XP = 'XP',
+  SEVEN = '7',
+  EIGHT = '8',
+  EIGHT_ONE = '8.1',
+  TEN = '10'
+}
+
+export enum OSXOperatingSystemVersionFilter {
+  SNOW_LEOPARD = 'Snow Leopard',
+  LION = 'Lion',
+  MOUNTAIN_LION = 'Mountain Lion',
+  MAVERICKS = 'Mavericks',
+  YOSEMITE = 'Yosemite',
+  EL_CAPITAN = 'El Capitan',
+  SIERRA = 'Sierra',
+  HIGH_SIERRA = 'High Sierra',
+  MOJAVE = 'Mojave'
 }
 
 export enum BrowserFilter {
