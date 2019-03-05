@@ -1,9 +1,9 @@
-import {response} from './browsers.json';
+import { response } from './browsers.json';
 
-export default async function fetch(url: string): Promise<{json: () => Promise<{}>}> {
-    return {
-        json: async() => {
-            return response;
-        }
-    };
+export default async function fetch(): Promise<{ json: () => Promise<{}> }> {
+  return {
+    json: async () => {
+      return response;
+    }
+  };
 }

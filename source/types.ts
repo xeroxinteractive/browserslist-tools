@@ -3,39 +3,41 @@ import { Options as BrowsersListOptions } from 'browserslist';
 export type Queries = string | ReadonlyArray<string>;
 
 export interface Filters<T> {
-    include?: T[],
-    exclude?: T[]
+  include?: T[];
+  exclude?: T[];
 }
 
 export interface Options {
-    username?: string;
-    accessKey?: string;
-    browserslist?: {
-        queries?: Queries;
-        opts?: BrowsersListOptions
-    },
-    browsers?: Filters<BrowserFilter>,
-    operatingSystems?: Filters<OperatingSystemFilter>,
-    operatingSystemVersion?: Filters<WindowsOperatingSystemVersionFilter> | Filters<OSXOperatingSystemVersionFilter>
+  username?: string;
+  accessKey?: string;
+  browserslist?: {
+    queries?: Queries;
+    opts?: BrowsersListOptions;
+  };
+  browsers?: Filters<BrowserFilter>;
+  operatingSystems?: Filters<OperatingSystemFilter>;
+  operatingSystemVersion?:
+    | Filters<WindowsOperatingSystemVersionFilter>
+    | Filters<OSXOperatingSystemVersionFilter>;
 }
 
 export interface Browser {
-    browser: string;
-    browser_version: string;
+  browser: string;
+  browser_version: string;
 }
 
 export interface Capability extends Browser {
-    os: string;
-    os_version: string;
-    browser: string;
-    browser_version: string | null;
-    device: string | null;
-    real_mobile: boolean | null;
+  os: string;
+  os_version: string;
+  browser: string;
+  browser_version: string | null;
+  device: string | null;
+  real_mobile: boolean | null;
 }
 
 export enum OperatingSystemFilter {
-    WINDOWS = 'WINDOWS',
-    OSX = 'OS X'
+  WINDOWS = 'Windows',
+  OSX = 'OSX'
 }
 
 export enum WindowsOperatingSystemVersionFilter {
@@ -59,5 +61,10 @@ export enum OSXOperatingSystemVersionFilter {
 }
 
 export enum BrowserFilter {
-    Firefox = 'firefox', Safari = 'safari', IE = 'ie', Chrome = 'chrome', Opera = 'opera', Edge = 'edge'
+  Firefox = 'firefox',
+  Safari = 'safari',
+  IE = 'ie',
+  Chrome = 'chrome',
+  Opera = 'opera',
+  Edge = 'edge'
 }

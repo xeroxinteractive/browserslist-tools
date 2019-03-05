@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getCapabilities options IE 10 + Windows 7 OS filter 1`] = `Array []`;
+exports[`getCapabilities options IE 10 + Windows 7 OS filter 1`] = `
+Array [
+  Object {
+    "browser": "ie",
+    "browser_version": "10.0",
+    "device": null,
+    "os": "Windows",
+    "os_version": "7",
+    "real_mobile": null,
+  },
+]
+`;
 
 exports[`getCapabilities options IE 10 1`] = `
 Array [
