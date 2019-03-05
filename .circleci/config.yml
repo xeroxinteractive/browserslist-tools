@@ -1,0 +1,51 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10
+
+jobs:
+  install_lint_test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-10-cache-{{ checksum "./yarn.lock" }}
+      - run: yarn install
+      - run: yarn audit
+      - run: yarn lint
+      - run: yarn test
+      - save_cache:
+          paths:
+            - ~/.yarn-cache
+            - ./node_modules
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          as: ~/repo
+      - add_ssh_keys:
+        fingerprints:
+          - '01:b8:2a:9f:35:20:b6:c0:bf:1f:16:0a:61:8d:7c:03'
+      - run:
+          name: Deploy package to npm
+          command: yarn deploy
+
+workflows:
+  version: 2
+  install_lint_deploy:
+    jobs:
+      - install_lint_test
+      - deploy:
+          requires:
+            - install_lint_test
+          filters:
+            branches:
+              only:
+                - master
