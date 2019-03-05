@@ -1,12 +1,13 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "declaration": true,
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "./build/"
+  },
+  "exclude": ["node_modules", "build"]
 }
