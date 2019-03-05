@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn run build:types && yarn run build:js",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build:types": "tsc --project ./tsconfig.declarations.json",
     "build:js": "babel ./source/ --out-dir ./build/ --extensions .ts --source-maps inline --ignore **/__tests__/**/*.ts,**/__mocks__/**/*.ts",
     "build:clean": "rm -rf ./build",
     "test": "jest",
