@@ -3,7 +3,8 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:10
+    - image: circleci/node:10.14.1
+  resource_class: small
 
 jobs:
   install_lint_test:
@@ -19,6 +20,7 @@ jobs:
       - run: yarn type-check
       - run: yarn test
       - save_cache:
+          keys: node-10-cache-{{ checksum "./yarn.lock" }}
           paths:
             - ~/.yarn-cache
             - ./node_modules
@@ -32,8 +34,15 @@ jobs:
       - attach_workspace:
           as: ~/repo
       - add_ssh_keys:
-        fingerprints:
-          - '01:b8:2a:9f:35:20:b6:c0:bf:1f:16:0a:61:8d:7c:03'
+          fingerprints:
+            - '8b:f7:d2:02:79:da:61:b8:c1:23:11:06:87:84:58:eb'
+      - run:
+          name: Configure git
+          command: |
+            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+            git config --global user.email "xeroxinteractive-circleci@xerox.com"
+            git config --global user.name "CircleCI"
       - run:
           name: Deploy package to npm
           command: yarn deploy
