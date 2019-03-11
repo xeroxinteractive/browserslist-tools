@@ -16,7 +16,7 @@
     "type-check": "tsc --noEmit",
     "format": "yarn run lint --fix",
     "deploy": "semantic-release",
-    "prepare": "yarn run build",
+    "prepublishOnly": "yarn run build",
     "circleci": "circleci config validate"
   },
   "browserslist": [
