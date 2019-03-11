@@ -16,9 +16,9 @@ export interface Options {
   };
   browsers?: Filters<BrowserFilter>;
   operatingSystems?: Filters<OperatingSystemFilter>;
-  operatingSystemVersion?:
-    | Filters<WindowsOperatingSystemVersionFilter>
-    | Filters<OSXOperatingSystemVersionFilter>;
+  operatingSystemVersion?: Filters<
+    WindowsOperatingSystemVersionFilter | OSXOperatingSystemVersionFilter
+  >;
 }
 
 export interface Browser {
