@@ -1,6 +1,6 @@
 {
   "name": "browserslist-browserstack",
-  "version": "0.0.0-semantic-release",
+  "version": "1.0.0",
   "description": "Filter available BrowserStack capabilities with a browserslist query.",
   "main": "build/index.js",
   "repository": "git@github.com:xeroxinteractive/browserslist-browserstack.git",
