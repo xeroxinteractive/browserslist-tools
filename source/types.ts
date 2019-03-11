@@ -37,7 +37,7 @@ export interface Capability extends Browser {
 
 export enum OperatingSystemFilter {
   WINDOWS = 'Windows',
-  OSX = 'OSX'
+  OSX = 'OS X'
 }
 
 export enum WindowsOperatingSystemVersionFilter {
