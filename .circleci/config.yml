@@ -20,7 +20,7 @@ jobs:
       - run: yarn type-check
       - run: yarn test
       - save_cache:
-          keys: node-10-cache-{{ checksum "./yarn.lock" }}
+          key: node-10-cache-{{ checksum "./yarn.lock" }}
           paths:
             - ~/.yarn-cache
             - ./node_modules
