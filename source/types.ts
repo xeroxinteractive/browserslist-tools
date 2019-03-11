@@ -61,10 +61,10 @@ export enum OSXOperatingSystemVersionFilter {
 }
 
 export enum BrowserFilter {
-  Firefox = 'firefox',
-  Safari = 'safari',
+  FIREFOX = 'firefox',
+  SAFARI = 'safari',
   IE = 'ie',
-  Chrome = 'chrome',
-  Opera = 'opera',
-  Edge = 'edge'
+  CHROME = 'chrome',
+  OPERA = 'opera',
+  EDGE = 'edge'
 }

@@ -5,7 +5,7 @@ import { response as mockAllCapabilities } from '../__mocks__/browsers.json';
 import { BrowserFilter, Browser } from '../types';
 
 const mockSupportedCapabilities: { [key: string]: Browser[] } = {
-  [BrowserFilter.Chrome]: [
+  [BrowserFilter.CHROME]: [
     {
       browser: 'chrome',
       browser_version: '48.0'
@@ -15,7 +15,7 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
       browser_version: '49.0'
     }
   ],
-  [BrowserFilter.Edge]: [
+  [BrowserFilter.EDGE]: [
     {
       browser: 'edge',
       browser_version: '17.0'
@@ -25,7 +25,7 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
       browser_version: '18.0'
     }
   ],
-  [BrowserFilter.Firefox]: [
+  [BrowserFilter.FIREFOX]: [
     {
       browser: 'firefox',
       browser_version: '64.0'
@@ -45,7 +45,7 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
       browser_version: '11.0'
     }
   ],
-  [BrowserFilter.Opera]: [
+  [BrowserFilter.OPERA]: [
     {
       browser: 'opera',
       browser_version: '12.15'
@@ -55,7 +55,7 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
       browser_version: '12.16'
     }
   ],
-  [BrowserFilter.Safari]: [
+  [BrowserFilter.SAFARI]: [
     {
       browser: 'safari',
       browser_version: '11.0'
@@ -104,10 +104,10 @@ describe('filterCapabilities', () => {
     test('safari + ie', async () => {
       const filtered = modulerUnderTest.filterCapabilities(
         mockAllCapabilities,
-        combine(BrowserFilter.Safari, BrowserFilter.IE),
+        combine(BrowserFilter.SAFARI, BrowserFilter.IE),
         {
           browsers: {
-            include: [BrowserFilter.IE, BrowserFilter.Safari]
+            include: [BrowserFilter.IE, BrowserFilter.SAFARI]
           },
           browserslist: {
             queries: ['ie', 'safari']
@@ -120,12 +120,12 @@ describe('filterCapabilities', () => {
         true
       );
       expect(
-        filtered.some(({ browser }) => browser === BrowserFilter.Safari)
+        filtered.some(({ browser }) => browser === BrowserFilter.SAFARI)
       ).toBe(true);
       expect(
         filtered.every(
           ({ browser }) =>
-            browser === BrowserFilter.Safari || browser === BrowserFilter.IE
+            browser === BrowserFilter.SAFARI || browser === BrowserFilter.IE
         )
       ).toBe(true);
     });
@@ -156,7 +156,7 @@ describe('filterCapabilities', () => {
         mockAllSupportedCapabilities,
         {
           browsers: {
-            exclude: [BrowserFilter.IE, BrowserFilter.Safari]
+            exclude: [BrowserFilter.IE, BrowserFilter.SAFARI]
           },
           browserslist: {
             queries: ['ie', 'safari']
@@ -168,7 +168,7 @@ describe('filterCapabilities', () => {
       expect(
         filtered.every(
           ({ browser }) =>
-            browser !== BrowserFilter.Safari && browser !== BrowserFilter.IE
+            browser !== BrowserFilter.SAFARI && browser !== BrowserFilter.IE
         )
       ).toBe(true);
     });
@@ -180,8 +180,8 @@ describe('filterCapabilities', () => {
         mockAllSupportedCapabilities,
         {
           browsers: {
-            include: [BrowserFilter.IE, BrowserFilter.Safari],
-            exclude: [BrowserFilter.Safari, BrowserFilter.Chrome]
+            include: [BrowserFilter.IE, BrowserFilter.SAFARI],
+            exclude: [BrowserFilter.SAFARI, BrowserFilter.CHROME]
           },
           browserslist: {
             queries: ['ie', 'safari']
