@@ -908,10 +908,10 @@
     into-stream "^4.0.0"
     lodash "^4.17.4"
 
-"@types/browserslist@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@types/browserslist/-/browserslist-4.3.0.tgz#662ee0f7ef875c8ae494715c05d31e1ed64ccee4"
-  integrity sha512-IV6NAYSPHkYsTUrBu32TUcxIsD62K/SBdP/jSPjpkrBszKBHWfPYlCInODiYbs3Ssvd97aYbicR4vkkr5SKOLA==
+"@types/browserslist@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@types/browserslist/-/browserslist-4.4.0.tgz#e2a5f7f8c7e97afb39f50812a77e5230d3ca2353"
+  integrity sha512-hrIjWSu7Hh96/rKlpChe58qHEwIZ0+F5Zf4QNdvSVP5LUXbaJM04g9tBjo702VTNqPZr5znEJeqNR3nAV3vJPg==
 
 "@types/events@*":
   version "3.0.0"
