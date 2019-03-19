@@ -90,11 +90,20 @@ An enum of macOS versions to filter capabilities, possible values:
 ## Options
 An interface to define the possible options to pass to `getCapabilities`. See [options](#Options).
 
-# Error Handling
-Both [browserslist](https://github.com/browserslist/browserslist) and [node-fetch](https://github.com/bitinn/node-fetch) have great built in error handling, browserslist-browserstack does __not__ interfere with their error handling, so you can check for `BrowserListError`'s, `AbortError`'s and `FetchError`'s, see [node-fetch docs](https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md) and [browserslist docs](https://github.com/browserslist/browserslist) for more details.
+## ResponseError
+A custom error class which indicates errors caused if a [node-fetch](https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js) response is not in the range [200,300]. Mainly used to catch `401 Unauthorized` errors when trying to pull capabilities from BrowserStack's REST API.
 
-Internally browserslist-browserstack uses TypeScript, and mainly just does piping between the results gathered with [browserslist](https://github.com/browserslist/browserslist) and [node-fetch](https://github.com/bitinn/node-fetch). Therefore you will only see `TypeError`'s if you don't follow the types specified in the [options section](#Options), if this isn't the case please [raise an issue](https://github.com/xeroxinteractive/browserslist-browserstack/issues) through GitHub.
+## FetchError
+For convinience, just fowards the class from [node-fetch](https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js).
+
+## BrowsersListError
+For convinience, just fowards the class from [browserslist](https://github.com/browserslist/browserslist/blob/master/error.js).
+
+# Error Handling
+Internally browserslist-browserstack uses TypeScript, therefore you may see `TypeError`'s if you do __not__ follow the types specified in the [options section](#Options). If a request to BrowserStack's REST API encounters an issue you will either see a [ResponseError](#ResponseError), [FetchError](#FetchError) or [AbortError](#AbortError). If there is an issue parsing queries with browserslist you will see a [BrowsersListError](#BrowsersListError).
+
+See [node-fetch docs](https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md) and [browserslist docs](https://github.com/browserslist/browserslist) for more details.
 
 ---
 
-[LICENSE](./LICENSE) | [CHANGELOG](./CHANGELOG.md)
+[LICENSE](./LICENSE) | [CHANGELOG](./CHANGELOG.md) | [ISSUES](https://github.com/xeroxinteractive/browserslist-browserstack/issues)
