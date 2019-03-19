@@ -38,6 +38,7 @@ const capabilities = await getCapabilities({
 
 # Options
 _Note: none of these options are required, by default `getCapabilities` will just return the list straight from BrowserStack's REST API provided `BROWSER_STACK_USERNAME` and `BROWSER_STACK_ACCESS_KEY` are set, and are valid._
+
 | Option | Type | Description | Example | Default |
 | --- | --- | --- | --- | --- |
 | username | `String` | Your BrowserStack Username to use when requesting supported capabilities for your account. | `"username"` | `process.env.BROWSER_STACK_USERNAME` |
@@ -89,5 +90,11 @@ An enum of macOS versions to filter capabilities, possible values:
 ## Options
 An interface to define the possible options to pass to `getCapabilities`. See [options](#Options).
 
-# LICENSE
-[MIT](./LICENSE)
+# Error Handling
+Both [browserslist](https://github.com/browserslist/browserslist) and [node-fetch](https://github.com/bitinn/node-fetch) have great built in error handling, browserslist-browserstack does __not__ interfere with their error handling, so you can check for `BrowserListError`'s, `AbortError`'s and `FetchError`'s, see [node-fetch docs](https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md) and [browserslist docs](https://github.com/browserslist/browserslist) for more details.
+
+Internally browserslist-browserstack uses TypeScript, and mainly just does piping between the results gathered with [browserslist](https://github.com/browserslist/browserslist) and [node-fetch](https://github.com/bitinn/node-fetch). Therefore you will only see `TypeError`'s if you don't follow the types specified in the [options section](#Options), if this isn't the case please [raise an issue](https://github.com/xeroxinteractive/browserslist-browserstack/issues) through GitHub.
+
+---
+
+[LICENSE](./LICENSE) | [CHANGELOG](./CHANGELOG.md)
