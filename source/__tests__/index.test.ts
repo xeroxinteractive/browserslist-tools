@@ -1,5 +1,5 @@
 import * as moduleUnderTest from '../index';
-import BrowserslistError from 'browserslist/error';
+import mockFetch from '../__mocks__/node-fetch';
 
 describe('getCapabilities', () => {
   describe('browserslist options', () => {
@@ -41,10 +41,23 @@ describe('getCapabilities', () => {
           }
         })
       ).rejects.toEqual(
-        new BrowserslistError(
+        new moduleUnderTest.BrowsersListError(
           'Unknown browser query `invalid`. Maybe you are using old Browserslist or made typo in query.'
         )
       );
+    });
+
+    test('invalid credentials', async () => {
+      mockFetch.mockImplementationOnce((...args) =>
+        require.requireActual('node-fetch').default(...args)
+      );
+      await expect(
+        moduleUnderTest.default({
+          browserslist: {
+            queries: 'invalid'
+          }
+        })
+      ).rejects.toEqual(new moduleUnderTest.ResponseError('Unauthorized', 401));
     });
   });
   describe('OS Filtering', () => {
