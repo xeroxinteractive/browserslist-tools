@@ -820,6 +820,16 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
+"@semantic-release/changelog@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-3.0.2.tgz#b09a8e0d072ef54d2bc7a5c82f6112dc3c8ae85d"
+  integrity sha512-pDUaBNAuPAqQ+ArHwvR160RG2LbfyIVz9EJXgxH0V547rlx/hCs0Sp7L4Rtzi5Z+d6CHcv9g2ynxplE1xAzp2g==
+  dependencies:
+    "@semantic-release/error" "^2.1.0"
+    aggregate-error "^2.0.0"
+    fs-extra "^7.0.0"
+    lodash "^4.17.4"
+
 "@semantic-release/commit-analyzer@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-6.1.0.tgz#32bbe3c23da86e23edf072fbb276fa2f383fcb17"
@@ -2604,24 +2614,24 @@ eslint-config-prettier@^4.1.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-xerox@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-xerox/-/eslint-config-xerox-1.0.1.tgz#2c6f6df182bd3f7c43b335aa106887f7c54cc2c4"
-  integrity sha512-GjTWdV5Tw3GIC5FW/2lb2IvIBa2ptgtU9SEM1rLDrL+yMil93cfmHLxpI50mptAPtPQzK5l5yRbbxYN73XKNbw==
+eslint-config-xerox@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-xerox/-/eslint-config-xerox-1.1.0.tgz#b4fa4c6ec025d83da78d518be1f73462872255b0"
+  integrity sha512-Da/JXN9rq3pM8Gnir4k1SvsvA/FIF2IENAzXwze/g7l1wGOkpArY6wUEuI5elHpRWs33Imvb0kuRhhqef6aEqA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^1.4.2"
     "@typescript-eslint/parser" "^1.4.2"
     babel-eslint "^10.0.1"
     eslint-config-prettier "^4.1.0"
-    eslint-plugin-jest "^22.3.0"
+    eslint-plugin-jest "^22.3.1"
     eslint-plugin-jsdoc "^4.1.1"
     eslint-plugin-prettier "^3.0.1"
     eslint-plugin-react "^7.12.4"
 
-eslint-plugin-jest@^22.3.0:
-  version "22.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.3.0.tgz#a10f10dedfc92def774ec9bb5bfbd2fb8e1c96d2"
-  integrity sha512-P1mYVRNlOEoO5T9yTqOfucjOYf1ktmJ26NjwjH8sxpCFQa6IhBGr5TpKl3hcAAT29hOsRJVuMWmTsHoUVo9FoA==
+eslint-plugin-jest@^22.3.1:
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.4.1.tgz#a5fd6f7a2a41388d16f527073b778013c5189a9c"
+  integrity sha512-gcLfn6P2PrFAVx3AobaOzlIEevpAEf9chTpFZz7bYfc7pz8XRv7vuKTIE4hxPKZSha6XWKKplDQ0x9Pq8xX2mg==
 
 eslint-plugin-jsdoc@^4.1.1:
   version "4.1.1"
