@@ -37,5 +37,8 @@ export {
   OperatingSystemFilter,
   WindowsOperatingSystemVersionFilter,
   OSXOperatingSystemVersionFilter,
-  Options
+  Options,
+  BrowsersListError,
+  FetchError,
+  ResponseError
 } from './types';

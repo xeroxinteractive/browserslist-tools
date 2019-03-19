@@ -1,4 +1,4 @@
-import { Capability, Browser, Options } from './types';
+import { Capability, Browser, Options, ResponseError } from './types';
 import { filter } from './helpers';
 import fetch from 'node-fetch';
 
@@ -60,5 +60,8 @@ export async function getAllCapabilities(
   const response = await fetch(
     `https://${username}:${accessKey}@api.browserstack.com/automate/browsers.json`
   );
+  if (!response.ok) {
+    throw new ResponseError(response.statusText, response.status);
+  }
   return await response.json();
 }
