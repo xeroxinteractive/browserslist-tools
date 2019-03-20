@@ -1,5 +1,6 @@
+[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
+
 # browserslist-browserstack
-[![npm package](https://img.shields.io/npm/v/browserslist-browserstack.svg?style=flat-square)](https://www.npmjs.com/package/browserslist-browserstack) [![license MIT](https://img.shields.io/npm/l/browserslist-browserstack.svg?style=flat-square)](./LICENSE) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![commit style angular](https://img.shields.io/static/v1.svg?label=commit%20style&message=angular&color=blueviolet&style=flat-square)](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
 
 Filter available BrowserStack capabilities with a browserslist query.
 
@@ -43,7 +44,7 @@ _Note: none of these options are required, by default `getCapabilities` will jus
 | --- | --- | --- | --- | --- |
 | username | `String` | Your BrowserStack Username to use when requesting supported capabilities for your account. | `"username"` | `process.env.BROWSER_STACK_USERNAME` |
 | accessKey | `String` | Your BrowserStack Access Key to use when requesting supported capabilities for your account. | `"xxxxxxxxxxxxxxxxxxxx"` | `process.env.BROWSER_STACK_ACCESS_KEY` |
-| browserslist | `Object` | Options to pass to browserslist. See [browserslist options](https://github.com/browserslist/browserslist#js-api). | `{ queries: ['> 1%', 'IE 10'], options: { ignoreUnknownVersions: true } }` | `undefined` |
+| browserslist | `Object` | Options to pass to browserslist. See [browserslist options][browserslist-js-api]. | `{ queries: ['> 1%', 'IE 10'], options: { ignoreUnknownVersions: true } }` | `undefined` |
 | browsers.include | `Array` | A list of [BrowserFilter's](#BrowserFilter) to include in the capabilities list. | `[BrowserFilter.FIREFOX, BrowserFilter.CHROME]` | `[]` |
 | browsers.exclude | `Array` | A list of [BrowserFilter's](#BrowserFilter) to exclude in the capabilities list. | `[BrowserFilter.IE, BrowserFilter.EDGE]` | `[]` |
 | operatingSystems.include | `Array` | A list of [OperatingSystemFilter's](#OperatingSystemFilter) to include in the capabilities list. | `[OperatingSystemFilter.WINDOWS]` | `[]` |
@@ -91,19 +92,48 @@ An enum of macOS versions to filter capabilities, possible values:
 An interface to define the possible options to pass to `getCapabilities`. See [options](#Options).
 
 ## ResponseError
-A custom error class which indicates errors caused if a [node-fetch](https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js) response is not in the range [200,300]. Mainly used to catch `401 Unauthorized` errors when trying to pull capabilities from BrowserStack's REST API.
+A custom error class which indicates errors caused if a node-fetch response is not in the range [200,300]. Mainly used to catch `401 Unauthorized` errors when trying to pull capabilities from BrowserStack's REST API.
 
 ## FetchError
-For convinience, just fowards the class from [node-fetch](https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js).
+For convinience, just fowards the class from [node-fetch][node-fetch-fetch-error].
 
 ## BrowsersListError
-For convinience, just fowards the class from [browserslist](https://github.com/browserslist/browserslist/blob/master/error.js).
+For convinience, just fowards the class from [browserslist][browserslist-error].
 
 # Error Handling
 If a request to BrowserStack's REST API encounters an issue you will either see a [ResponseError](#ResponseError), [FetchError](#FetchError) or [AbortError](#AbortError). If there is an issue parsing queries with browserslist you will see a [BrowsersListError](#BrowsersListError).
 
-See [node-fetch docs](https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md) and [browserslist docs](https://github.com/browserslist/browserslist) for more details.
+See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browserslist-repo] for more details.
 
 ---
 
-[LICENSE](./LICENSE) | [CHANGELOG](./CHANGELOG.md) | [ISSUES](https://github.com/xeroxinteractive/browserslist-browserstack/issues)
+[LICENSE][license] | [CHANGELOG][changelog] | [ISSUES][issues]
+
+[license]: ./LICENSE
+[changelog]: ./CHANGELOG.md
+[issues]: https://github.com/xeroxinteractive/browserslist-browserstack/issues
+
+
+[circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack
+[circleci-link]: https://circleci.com/gh/xeroxinteractive/browserslist-browserstack/tree/master
+
+[npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
+[npm-link]: https://www.npmjs.com/package/browserslist-browserstack
+
+[license-badge]: https://flat.badgen.net/npm/license/browserslist-browserstack
+
+[commit-style-badge]: https://flat.badgen.net/badge/commit%20style/angular/purple
+[commit-style-link]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
+
+[semantic-release-badge]: https://flat.badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic%20release/e10079
+[semantic-relase-link]: https://github.com/semantic-release/semantic-release
+
+
+[browserslist-repo]: https://github.com/browserslist/browserslist
+[browserslist-js-api]: https://github.com/browserslist/browserslist#js-api
+[browserslist-error]: https://github.com/browserslist/browserslist/blob/master/error.js
+
+
+[node-fetch-repo]: https://github.com/bitinn/node-fetch
+[node-fetch-error-handling]: https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md
+[node-fetch-fetch-error]: https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js
