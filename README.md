@@ -100,7 +100,7 @@ For convinience, just fowards the class from [node-fetch](https://github.com/bit
 For convinience, just fowards the class from [browserslist](https://github.com/browserslist/browserslist/blob/master/error.js).
 
 # Error Handling
-Internally browserslist-browserstack uses TypeScript, therefore you may see `TypeError`'s if you do __not__ follow the types specified in the [options section](#Options). If a request to BrowserStack's REST API encounters an issue you will either see a [ResponseError](#ResponseError), [FetchError](#FetchError) or [AbortError](#AbortError). If there is an issue parsing queries with browserslist you will see a [BrowsersListError](#BrowsersListError).
+If a request to BrowserStack's REST API encounters an issue you will either see a [ResponseError](#ResponseError), [FetchError](#FetchError) or [AbortError](#AbortError). If there is an issue parsing queries with browserslist you will see a [BrowsersListError](#BrowsersListError).
 
 See [node-fetch docs](https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md) and [browserslist docs](https://github.com/browserslist/browserslist) for more details.
 
