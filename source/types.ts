@@ -1,4 +1,28 @@
 import { Options as BrowsersListOptions } from 'browserslist';
+import BrowsersListError from 'browserslist/error';
+import { FetchError } from 'node-fetch';
+
+export { BrowsersListError, FetchError };
+
+/**
+ * Thrown if node-fetch response status is not >= 200 < 300.
+ */
+export class ResponseError extends Error {
+  public status: number;
+  /**
+   * Creates a new ResponseError instance.
+   *
+   * @param statusText - The message returned by the server.
+   * @param status - The HTTP status code returned by the server.
+   */
+  public constructor(statusText: string, status: number) {
+    super(`${statusText} (${status})`);
+    this.status = status;
+    this.name = this.constructor.name;
+    Object.setPrototypeOf(this, new.target.prototype);
+    Error.captureStackTrace(this, this.constructor);
+  }
+}
 
 export type Queries = string | ReadonlyArray<string>;
 
