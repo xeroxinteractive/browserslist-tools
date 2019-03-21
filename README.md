@@ -114,7 +114,7 @@ See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browser
 [issues]: https://github.com/xeroxinteractive/browserslist-browserstack/issues
 
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack/master
+[circleci-badge]: https://img.shields.io/circleci/project/github/xeroxinteractive/browserslist-browserstack/master.svg?style=flat-square
 [circleci-link]: https://circleci.com/gh/xeroxinteractive/browserslist-browserstack/tree/master
 
 [npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
