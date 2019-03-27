@@ -98,5 +98,8 @@
   "dependencies": {
     "browserslist": "^4.4.2",
     "node-fetch": "^2.3.0"
+  },
+  "resolutions": {
+    "js-yaml": ">=3.13.0"
   }
 }
