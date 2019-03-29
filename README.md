@@ -2,9 +2,11 @@
 
 # browserslist-browserstack
 
-Filter available BrowserStack capabilities with a browserslist query.
+Easily filter the browser versions and operating systems you use to run automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.
 
 ## Usage
+[![minimal example][minimal-example-image]][minimal-example-link]
+
 1. Install the npm module:
 ```bash
 yarn add browserslist-browserstack
@@ -138,3 +140,6 @@ See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browser
 [node-fetch-repo]: https://github.com/bitinn/node-fetch
 [node-fetch-error-handling]: https://github.com/bitinn/node-fetch/blob/master/ERROR-HANDLING.md
 [node-fetch-fetch-error]: https://github.com/bitinn/node-fetch/blob/master/src/fetch-error.js
+
+[minimal-example-image]: ./minimal-example.jpg
+[minimal-example-link]: ./examples/minimal.js
