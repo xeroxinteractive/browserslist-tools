@@ -2,10 +2,13 @@
 
 # browserslist-browserstack
 
-Easily filter the browser versions and operating systems you use to run automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.
+__Important Note: In order to use this package a BrowserStack account with a valid Automate plan is required, a free trial is available.__
+
+Easily filter the browser versions and operating systems to use when runnning automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.
+
 
 ## Usage
-The main use case for using browserslist-browserstack is to test your website across a number of different browsers and operating systems, without having to manually specify them or update them everytime a new browser version is released. The example below shows a minimal use-case using selenium-webdriver to run integration tests for https://www.google.com on BrowserStack's Automate platform. You would likely include this code as part of a testing suite like [Jest][jest-link] or [Mocha][mocha-link], and perform some relevant assertions like detecting JS errors on your webpage for different browsers.
+The main use case for using browserslist-browserstack is to test websites across a number of different browsers and operating systems, without having to manually specify them or update them everytime a new browser version is released. The example below shows a minimal use-case using selenium-webdriver to run integration tests for https://www.google.com on BrowserStack's Automate platform. This code would likely be included as part of a testing suite like [Jest][jest-link] or [Mocha][mocha-link], and perform some relevant assertions like detecting JS errors on a webpage for different browsers.
 [![minimal example][minimal-example-image]][minimal-example-link]
 [View the source code][minimal-example-link]
 
@@ -17,7 +20,7 @@ yarn add browserslist-browserstack --dev
 # or
 npm install browserslist-browserstack --save-dev
 ```
-2. Import it into your project:
+2. Import it into a project:
 ```javascript
 const getCapabilities = require('browserslist-browserstack').default;
 // or
@@ -43,13 +46,13 @@ const capabilities = await getCapabilities({
 });
 ```
 
-# Options
+## Options
 _Note: none of these options are required, by default `getCapabilities` will just return the list straight from BrowserStack's REST API provided `BROWSER_STACK_USERNAME` and `BROWSER_STACK_ACCESS_KEY` are set, and are valid._
 
 | Option | Type | Description | Example | Default |
 | --- | --- | --- | --- | --- |
-| username | `String` | Your BrowserStack Username to use when requesting supported capabilities for your account. | `"username"` | `process.env.BROWSER_STACK_USERNAME` |
-| accessKey | `String` | Your BrowserStack Access Key to use when requesting supported capabilities for your account. | `"xxxxxxxxxxxxxxxxxxxx"` | `process.env.BROWSER_STACK_ACCESS_KEY` |
+| username | `String` | A BrowserStack Username to use when requesting supported capabilities for an account. | `"username"` | `process.env.BROWSER_STACK_USERNAME` |
+| accessKey | `String` | A BrowserStack Access Key to use when requesting supported capabilities for an account. | `"xxxxxxxxxxxxxxxxxxxx"` | `process.env.BROWSER_STACK_ACCESS_KEY` |
 | browserslist | `Object` | Options to pass to browserslist. See [browserslist options][browserslist-js-api]. | `{ queries: ['> 1%', 'IE 10'], options: { ignoreUnknownVersions: true } }` | `undefined` |
 | browsers.include | `Array` | A list of [BrowserFilter's](#BrowserFilter) to include in the capabilities list. | `[BrowserFilter.FIREFOX, BrowserFilter.CHROME]` | `[]` |
 | browsers.exclude | `Array` | A list of [BrowserFilter's](#BrowserFilter) to exclude in the capabilities list. | `[BrowserFilter.IE, BrowserFilter.EDGE]` | `[]` |
@@ -59,9 +62,9 @@ _Note: none of these options are required, by default `getCapabilities` will jus
 | operatingSystemVersion.exclude | `Array` | A list of [operatingSystemVersion's](#operatingSystemVersion) to exclude in the capabilities list. | `[operatingSystemVersion.EL_CAPITAN, operatingSystemVersion.HIGH_SIERRA]` | `[]` |
 | formatForSelenium | `Boolean` | Whether to add browserName and browserVersion properties to the outputted capabilites, as selenium does not understand BrowserStack's `browser` and `browser_version` equivelants. | `false` | `true`
 
-# Types
+## Types
 These are the core types exported by `browserslist-browserstack`.
-## BrowserFilter
+### BrowserFilter
 An enum of browsers to filter capabilites, possible values:
 * FIREFOX
 * SAFARI
@@ -70,12 +73,12 @@ An enum of browsers to filter capabilites, possible values:
 * OPERA
 * EDGE
 
-## OperatingSystemFilter
+### OperatingSystemFilter
 An enum of operating systems to filter capabilites, possible values:
 * WINDOWS
 * OSX
 
-## WindowsOperatingSystemVersionFilter
+### WindowsOperatingSystemVersionFilter
 An enum of windows versions to filter capabilities, possible values:
 * XP
 * SEVEN
@@ -83,7 +86,7 @@ An enum of windows versions to filter capabilities, possible values:
 * EIGHT_ONE
 * TEN
 
-## OSXOperatingSystemVersionFilter
+### OSXOperatingSystemVersionFilter
 An enum of macOS versions to filter capabilities, possible values:
 * SNOW_LEOPARD
 * LION
@@ -95,22 +98,33 @@ An enum of macOS versions to filter capabilities, possible values:
 * HIGH_SIERRA
 * MOJAVE
 
-## Options
+### Options
 An interface to define the possible options to pass to `getCapabilities`. See [options](#Options).
 
-## ResponseError
+### ResponseError
 A custom error class which indicates errors caused if a node-fetch response is not in the range [200,300]. Mainly used to catch `401 Unauthorized` errors when trying to pull capabilities from BrowserStack's REST API.
 
-## FetchError
+### FetchError
 For convinience, just fowards the class from [node-fetch][node-fetch-fetch-error].
 
-## BrowsersListError
+### BrowsersListError
 For convinience, just fowards the class from [browserslist][browserslist-error].
 
-# Error Handling
-If a request to BrowserStack's REST API encounters an issue you will either see a [ResponseError](#ResponseError), [FetchError](#FetchError) or [AbortError](#AbortError). If there is an issue parsing queries with browserslist you will see a [BrowsersListError](#BrowsersListError).
+## Error Handling
+If a request to BrowserStack's REST API encounters an issue one of these errors will be thrown:
+- [ResponseError](#ResponseError)
+- [FetchError](#FetchError)
+- [AbortError](#AbortError)
+
+If there is an issue parsing queries with browserslist a [BrowsersListError](#BrowsersListError) will be thrown.
 
 See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browserslist-repo] for more details.
+
+## Useful links
+- [BrowserStack Automate][browserstack-automate-link]: required service to run tests on remote machines with a webdriver.
+- [browserslist][browserslist-repo]: used to query browser versions.
+- [selenium-webdriver][selenium-link]: allows control of remote browsers on BrowserStack's Automate platform.
+- [browserstack-local][browserstack-local-link]: allows testing of local pages that aren not hosted on a web server.
 
 ---
 
@@ -150,3 +164,6 @@ See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browser
 
 [jest-link]: https://jestjs.io/
 [mocha-link]: https://mochajs.org/
+[browserstack-automate-link]: https://www.browserstack.com/automate
+[selenium-link]: https://github.com/SeleniumHQ/selenium
+[browserstack-local-link]: https://github.com/browserstack/browserstack-local-nodejs
