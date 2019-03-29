@@ -1,7 +1,12 @@
 {
   "name": "browserslist-browserstack",
   "version": "1.1.2",
-  "description": "Filter available BrowserStack capabilities with a browserslist query.",
+  "description": "Easily filter the browser versions and operating systems you use to run automated tests through BrowserStack. Using a combination of browserslist rules like > 1% and include/exclude filters.",
+  "keywords": [
+    "browserslist",
+    "browserstack",
+    "integration-testing"
+  ],
   "main": "build/index.js",
   "repository": "git@github.com:xeroxinteractive/browserslist-browserstack.git",
   "author": "Andrew Leedham <AndrewLeedham@Outlook.com>",
