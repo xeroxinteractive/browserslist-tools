@@ -43,6 +43,7 @@ export interface Options {
   operatingSystemVersion?: Filters<
     WindowsOperatingSystemVersionFilter | OSXOperatingSystemVersionFilter
   >;
+  formatForSelenium?: boolean;
 }
 
 export interface Browser {

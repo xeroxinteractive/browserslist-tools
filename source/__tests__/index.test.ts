@@ -169,5 +169,18 @@ describe('getCapabilities', () => {
         })
       ).resolves.toMatchSnapshot();
     });
+
+    test('formatting for selenium', async () => {
+      const capabilities = await moduleUnderTest.default({
+        browserslist: {
+          queries: 'IE 10'
+        },
+        formatForSelenium: false
+      });
+      for (const capability of capabilities) {
+        expect(capability).not.toHaveProperty('browserName');
+        expect(capability).not.toHaveProperty('browserVersion');
+      }
+    });
   });
 });

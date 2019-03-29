@@ -4,6 +4,8 @@ exports[`getCapabilities OS Filtering os + os version exclude filters 1`] = `
 Array [
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "Windows",
@@ -12,6 +14,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "Windows",
@@ -20,6 +24,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "Windows",
@@ -33,6 +39,8 @@ exports[`getCapabilities OS Filtering os + os version include + exclude filters 
 Array [
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -41,6 +49,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -49,6 +59,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -57,6 +69,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -65,6 +79,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -73,6 +89,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -81,6 +99,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "42.0",
     "browser_version": "42.0",
     "device": null,
     "os": "OS X",
@@ -94,6 +114,8 @@ exports[`getCapabilities OS Filtering os + os version include filters 1`] = `
 Array [
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -107,6 +129,8 @@ exports[`getCapabilities browser filtering browser exclude filter 1`] = `
 Array [
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -115,6 +139,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -123,6 +149,8 @@ Array [
   },
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "18.0",
     "browser_version": "18.0",
     "device": null,
     "os": "Windows",
@@ -136,6 +164,8 @@ exports[`getCapabilities browser filtering browser include + exclude filter 1`] 
 Array [
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "18.0",
     "browser_version": "18.0",
     "device": null,
     "os": "Windows",
@@ -149,6 +179,8 @@ exports[`getCapabilities browser filtering browser include filter 1`] = `
 Array [
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -157,6 +189,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -165,6 +199,8 @@ Array [
   },
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "18.0",
     "browser_version": "18.0",
     "device": null,
     "os": "Windows",
@@ -178,6 +214,8 @@ exports[`getCapabilities browserslist options last 2 versions 1`] = `
 Array [
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "Windows",
@@ -186,6 +224,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "Windows",
@@ -194,6 +234,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -202,6 +244,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "11.0",
     "browser_version": "11.0",
     "device": null,
     "os": "Windows",
@@ -210,6 +254,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "Windows",
@@ -218,6 +264,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "Windows",
@@ -226,6 +274,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "Windows",
@@ -234,6 +284,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "Windows",
@@ -242,6 +294,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -250,6 +304,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "Windows",
@@ -258,6 +314,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "Windows",
@@ -266,6 +324,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "Windows",
@@ -274,6 +334,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "Windows",
@@ -282,6 +344,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "11.0",
     "browser_version": "11.0",
     "device": null,
     "os": "Windows",
@@ -290,6 +354,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "Windows",
@@ -298,6 +364,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "Windows",
@@ -306,6 +374,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "Windows",
@@ -314,6 +384,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "Windows",
@@ -322,6 +394,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "11.0",
     "browser_version": "11.0",
     "device": null,
     "os": "Windows",
@@ -330,6 +404,8 @@ Array [
   },
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "17.0",
     "browser_version": "17.0",
     "device": null,
     "os": "Windows",
@@ -338,6 +414,8 @@ Array [
   },
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "18.0",
     "browser_version": "18.0",
     "device": null,
     "os": "Windows",
@@ -346,6 +424,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "Windows",
@@ -354,6 +434,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "Windows",
@@ -362,6 +444,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -370,6 +454,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -378,6 +464,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "OS X",
@@ -386,6 +474,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "OS X",
@@ -394,6 +484,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -402,6 +494,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -410,6 +504,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "OS X",
@@ -418,6 +514,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "OS X",
@@ -426,6 +524,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -434,6 +534,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -442,6 +544,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "OS X",
@@ -450,6 +554,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "OS X",
@@ -458,6 +564,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -466,6 +574,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -474,6 +584,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "OS X",
@@ -482,6 +594,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "OS X",
@@ -490,6 +604,8 @@ Array [
   },
   Object {
     "browser": "safari",
+    "browserName": "safari",
+    "browserVersion": "11.1",
     "browser_version": "11.1",
     "device": null,
     "os": "OS X",
@@ -498,6 +614,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -506,6 +624,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -514,6 +634,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "71.0",
     "browser_version": "71.0",
     "device": null,
     "os": "OS X",
@@ -522,6 +644,8 @@ Array [
   },
   Object {
     "browser": "chrome",
+    "browserName": "chrome",
+    "browserVersion": "72.0",
     "browser_version": "72.0",
     "device": null,
     "os": "OS X",
@@ -530,6 +654,8 @@ Array [
   },
   Object {
     "browser": "safari",
+    "browserName": "safari",
+    "browserVersion": "12.0",
     "browser_version": "12.0",
     "device": null,
     "os": "OS X",
@@ -538,6 +664,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "64.0",
     "browser_version": "64.0",
     "device": null,
     "os": "OS X",
@@ -546,6 +674,8 @@ Array [
   },
   Object {
     "browser": "firefox",
+    "browserName": "firefox",
+    "browserVersion": "65.0",
     "browser_version": "65.0",
     "device": null,
     "os": "OS X",
@@ -559,6 +689,8 @@ exports[`getCapabilities browserslist options multiple browser query 1`] = `
 Array [
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -567,6 +699,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -575,6 +709,8 @@ Array [
   },
   Object {
     "browser": "edge",
+    "browserName": "edge",
+    "browserVersion": "18.0",
     "browser_version": "18.0",
     "device": null,
     "os": "Windows",
@@ -588,6 +724,8 @@ exports[`getCapabilities browserslist options single browser query 1`] = `
 Array [
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
@@ -596,6 +734,8 @@ Array [
   },
   Object {
     "browser": "ie",
+    "browserName": "ie",
+    "browserVersion": "10.0",
     "browser_version": "10.0",
     "device": null,
     "os": "Windows",
