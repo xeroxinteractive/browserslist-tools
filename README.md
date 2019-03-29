@@ -5,13 +5,17 @@
 Easily filter the browser versions and operating systems you use to run automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.
 
 ## Usage
+The main use case for using browserslist-browserstack is to test your website across a number of different browsers and operating systems, without having to manually specify them or update them everytime a new browser version is released. The example below shows a minimal use-case using selenium-webdriver to run integration tests for https://www.google.com on BrowserStack's Automate platform. You would likely include this code as part of a testing suite like [Jest][jest-link] or [Mocha][mocha-link], and perform some relevant assertions like detecting JS errors on your webpage for different browsers.
 [![minimal example][minimal-example-image]][minimal-example-link]
+[View the source code][minimal-example-link]
 
+## Setup
+browserslist-browserstack is an npm module, so getting things up and running is simple.
 1. Install the npm module:
 ```bash
-yarn add browserslist-browserstack
+yarn add browserslist-browserstack --dev
 # or
-npm install browserslist-browserstack
+npm install browserslist-browserstack --save-dev
 ```
 2. Import it into your project:
 ```javascript
@@ -143,3 +147,6 @@ See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browser
 
 [minimal-example-image]: ./minimal-example.jpg
 [minimal-example-link]: ./examples/minimal.js
+
+[jest-link]: https://jestjs.io/
+[mocha-link]: https://mochajs.org/
