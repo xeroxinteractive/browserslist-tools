@@ -54,8 +54,8 @@ export function filterCapabilities(
  * @returns The JSON response from the BrowserStack REST API Request.
  */
 export async function getAllCapabilities(
-  username: string = process.env.BROWSER_STACK_USERNAME,
-  accessKey: string = process.env.BROWSER_STACK_ACCESS_KEY
+  username: string,
+  accessKey: string
 ): Promise<Capability[]> {
   const response = await fetch(
     `https://${username}:${accessKey}@api.browserstack.com/automate/browsers.json`

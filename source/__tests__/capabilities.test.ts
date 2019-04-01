@@ -199,7 +199,7 @@ describe('filterCapabilities', () => {
 
 test('getAllCapabilities', async () => {
   await expect(
-    modulerUnderTest.getAllCapabilities()
+    modulerUnderTest.getAllCapabilities('username', 'accessKey')
   ).resolves.toMatchSnapshot();
 });
 

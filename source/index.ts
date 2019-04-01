@@ -2,15 +2,25 @@ import browserslist from 'browserslist';
 import { Capability, Options } from './types';
 import { getAllCapabilities, filterCapabilities } from './capabilities';
 
+const defaultOptions: Options = {
+  username: process.env.BROWSER_STACK_USERNAME,
+  accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
+  formatForSelenium: true
+};
+
 /**
  * Gets a list of capabilities from BrowserStack's REST API filtered using browser and os options as well as browserslist queries.
  *
- * @param options - The options to use when getting capabilites.
+ * @param userOptions - The options specified by the user to use when getting capabilites.
  * @returns A list of filtered capabilities.
  */
 export default async function getCapabilities(
-  options?: Options
+  userOptions?: Options
 ): Promise<Capability[]> {
+  const options: Options = {
+    ...defaultOptions,
+    ...userOptions
+  };
   const allCapabilities = await getAllCapabilities(
     options.username,
     options.accessKey
@@ -28,8 +38,20 @@ export default async function getCapabilities(
           : browser_version
     };
   });
-
-  return filterCapabilities(allCapabilities, allSupportedBrowsers, options);
+  const capabilites = filterCapabilities(
+    allCapabilities,
+    allSupportedBrowsers,
+    options
+  );
+  if (options.formatForSelenium) {
+    return capabilites.map((capability) => ({
+      browserName: capability.browser,
+      browserVersion: capability.browser_version,
+      ...capability
+    }));
+  } else {
+    return capabilites;
+  }
 }
 
 export {
