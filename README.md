@@ -1,18 +1,11 @@
 [![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
 
 # browserslist-browserstack
-
-__Important Note: In order to use this package a BrowserStack account with a valid Automate plan is required, a free trial is available.__
-
-Easily filter the browser versions and operating systems to use when runnning automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.
-
-
-## Usage
-The main use case for using browserslist-browserstack is to test websites across a number of different browsers and operating systems, without having to manually specify them or update them everytime a new browser version is released. The example below shows a minimal use-case using selenium-webdriver to run integration tests for https://www.google.com on BrowserStack's Automate platform. This code would likely be included as part of a testing suite like [Jest][jest-link] or [Mocha][mocha-link], and perform some relevant assertions like detecting JS errors on a webpage for different browsers.
-[![minimal example][minimal-example-image]][minimal-example-link]
-[View the source code][minimal-example-link]
+Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
 
 ## Setup
+__Important Note: In order to use this package a BrowserStack account with a valid Automate plan is required, a free trial is available.__
+
 browserslist-browserstack is an npm module, so getting things up and running is simple.
 1. Install the npm module:
 ```bash
@@ -20,7 +13,7 @@ yarn add browserslist-browserstack --dev
 # or
 npm install browserslist-browserstack --save-dev
 ```
-2. Import it into a project:
+2. Import it into a project (e.g. `browserstack.test.js` or whatever convention your testing suite uses):
 ```javascript
 const getCapabilities = require('browserslist-browserstack').default;
 // or
@@ -46,6 +39,15 @@ const capabilities = await getCapabilities({
 });
 ```
 
+## Example
+The main use case for using browserslist-browserstack is to test websites across a number of different browsers and operating systems, without having to manually specify them or update them everytime a new browser version is released. The example below shows a minimal use-case using selenium-webdriver to run integration tests for https://www.google.com on BrowserStack's Automate platform. This code would likely be included as part of a testing suite like [Jest][jest-link] or [Mocha][mocha-link], and perform some relevant assertions like detecting JS errors on a webpage for different browsers.
+[![minimal example][minimal-example-image]][minimal-example-link]
+[View the source code][minimal-example-link]
+
+Running the above code, providing valid `BROWSER_STACK_KEY` and `BROWSER_STACK_KEY` environment variable are set, would result in the following 3 tests being run on BrowserStack (browser versions will change as new ones are released, but should always be the latest):
+
+![BrowserStack Interface][browserstack-image]
+
 ## Options
 _Note: none of these options are required, by default `getCapabilities` will just return the list straight from BrowserStack's REST API provided `BROWSER_STACK_USERNAME` and `BROWSER_STACK_ACCESS_KEY` are set, and are valid._
 
@@ -53,7 +55,7 @@ _Note: none of these options are required, by default `getCapabilities` will jus
 | --- | --- | --- | --- | --- |
 | username | `String` | A BrowserStack Username to use when requesting supported capabilities for an account. | `"username"` | `process.env.BROWSER_STACK_USERNAME` |
 | accessKey | `String` | A BrowserStack Access Key to use when requesting supported capabilities for an account. | `"xxxxxxxxxxxxxxxxxxxx"` | `process.env.BROWSER_STACK_ACCESS_KEY` |
-| browserslist | `Object` | Options to pass to browserslist. See [browserslist options][browserslist-js-api]. | `{ queries: ['> 1%', 'IE 10'], options: { ignoreUnknownVersions: true } }` | `undefined` |
+| browserslist | `Object` | Options to pass to Browserslist. See [Browserslist options][browserslist-js-api]. | `{ queries: ['> 1%', 'IE 10'], options: { ignoreUnknownVersions: true } }` | `undefined` |
 | browsers.include | `Array` | A list of [BrowserFilter's](#BrowserFilter) to include in the capabilities list. | `[BrowserFilter.FIREFOX, BrowserFilter.CHROME]` | `[]` |
 | browsers.exclude | `Array` | A list of [BrowserFilter's](#BrowserFilter) to exclude in the capabilities list. | `[BrowserFilter.IE, BrowserFilter.EDGE]` | `[]` |
 | operatingSystems.include | `Array` | A list of [OperatingSystemFilter's](#OperatingSystemFilter) to include in the capabilities list. | `[OperatingSystemFilter.WINDOWS]` | `[]` |
@@ -108,7 +110,7 @@ A custom error class which indicates errors caused if a node-fetch response is n
 For convinience, just fowards the class from [node-fetch][node-fetch-fetch-error].
 
 ### BrowsersListError
-For convinience, just fowards the class from [browserslist][browserslist-error].
+For convinience, just fowards the class from [Browserslist][browserslist-error].
 
 ## Error Handling
 If a request to BrowserStack's REST API encounters an issue one of these errors will be thrown:
@@ -116,13 +118,13 @@ If a request to BrowserStack's REST API encounters an issue one of these errors 
 - [FetchError](#FetchError)
 - [AbortError](#AbortError)
 
-If there is an issue parsing queries with browserslist a [BrowsersListError](#BrowsersListError) will be thrown.
+If there is an issue parsing queries with Browserslist a [BrowsersListError](#BrowsersListError) will be thrown.
 
-See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browserslist-repo] for more details.
+See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browserslist-repo] for more details.
 
 ## Useful links
 - [BrowserStack Automate][browserstack-automate-link]: required service to run tests on remote machines with a webdriver.
-- [browserslist][browserslist-repo]: used to query browser versions.
+- [Browserslist][browserslist-repo]: used to query browser versions.
 - [selenium-webdriver][selenium-link]: allows control of remote browsers on BrowserStack's Automate platform.
 - [browserstack-local][browserstack-local-link]: allows testing of local pages that aren not hosted on a web server.
 
@@ -161,6 +163,7 @@ See [node-fetch docs][node-fetch-error-handling] and [browserslist docs][browser
 
 [minimal-example-image]: ./minimal-example.jpg
 [minimal-example-link]: ./examples/minimal.js
+[browserstack-image]: ./browserstack.jpg
 
 [jest-link]: https://jestjs.io/
 [mocha-link]: https://mochajs.org/

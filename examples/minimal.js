@@ -28,7 +28,6 @@ const {
   });
 
   for (const capability of capabilities) {
-    console.log(capability);
     const driver = new Builder()
       .usingServer('http://hub-cloud.browserstack.com/wd/hub')
       .withCapabilities({

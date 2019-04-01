@@ -1,7 +1,7 @@
 {
   "name": "browserslist-browserstack",
   "version": "1.1.2",
-  "description": "Easily filter the browser versions and operating systems to use when runnning automated tests through BrowserStack. Using a combination of browserslist rules like `> 1%` and include/exclude filters.",
+  "description": "Run BrowserStack tests for all browsers in project’s Browserslist config (with additional include/exclude filters).",
   "keywords": [
     "browserslist",
     "browserstack",
