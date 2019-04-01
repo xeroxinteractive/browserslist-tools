@@ -1,4 +1,4 @@
-[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
+[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link]
 
 # browserslist-browserstack
 Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
@@ -149,7 +149,7 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [commit-style-link]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
 
 [semantic-release-badge]: https://flat.badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic%20release/e10079
-[semantic-relase-link]: https://github.com/semantic-release/semantic-release
+[semantic-release-link]: https://github.com/semantic-release/semantic-release
 
 
 [browserslist-repo]: https://github.com/browserslist/browserslist
