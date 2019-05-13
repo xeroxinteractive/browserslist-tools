@@ -1,7 +1,8 @@
-[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link]
-
 # browserslist-browserstack
-Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
+
+> Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
+
+[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link]
 
 ## Setup
 __Important Note: In order to use this package a BrowserStack account with a valid Automate plan is required, a free trial is available.__
