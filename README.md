@@ -138,7 +138,7 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [issues]: https://github.com/xeroxinteractive/browserslist-browserstack/issues
 
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack
+[circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack/master
 [circleci-link]: https://circleci.com/gh/xeroxinteractive/browserslist-browserstack/tree/master
 
 [npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
