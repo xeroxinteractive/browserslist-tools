@@ -1,5 +1,5 @@
 import browserslist from 'browserslist';
-import { Capability, Options } from './types';
+import { Capability, Options, Browser } from './types';
 import { getAllCapabilities, filterCapabilities } from './capabilities';
 
 const defaultOptions: Options = {
@@ -28,27 +28,31 @@ export default async function getCapabilities(
   const allSupportedBrowsers = browserslist(
     options.browserslist.queries,
     options.browserslist.opts
-  ).map((browserString: string) => {
-    const [browser, browser_version] = browserString.split(' ');
-    return {
-      browser,
-      browser_version:
-        !browser_version.includes('.') && !isNaN(parseFloat(browser_version))
-          ? `${browser_version}.0`
-          : browser_version
-    };
-  });
+  ).map(
+    (browserString: string): Browser => {
+      const [browser, browser_version] = browserString.split(' ');
+      return {
+        browser,
+        browser_version:
+          !browser_version.includes('.') && !isNaN(parseFloat(browser_version))
+            ? `${browser_version}.0`
+            : browser_version
+      };
+    }
+  );
   const capabilites = filterCapabilities(
     allCapabilities,
     allSupportedBrowsers,
     options
   );
   if (options.formatForSelenium) {
-    return capabilites.map((capability) => ({
-      browserName: capability.browser,
-      browserVersion: capability.browser_version,
-      ...capability
-    }));
+    return capabilites.map(
+      (capability: Capability): Capability => ({
+        browserName: capability.browser,
+        browserVersion: capability.browser_version,
+        ...capability
+      })
+    );
   } else {
     return capabilites;
   }
