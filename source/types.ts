@@ -24,7 +24,7 @@ export class ResponseError extends Error {
   }
 }
 
-export type Queries = string | ReadonlyArray<string>;
+export type Queries = string | readonly string[];
 
 export interface Filters<T> {
   include?: T[];
@@ -58,6 +58,10 @@ export interface Capability extends Browser {
   browser_version: string | null;
   device: string | null;
   real_mobile: boolean | null;
+
+  // selenium
+  browserName?: string;
+  browserVersion?: string;
 }
 
 export enum OperatingSystemFilter {
