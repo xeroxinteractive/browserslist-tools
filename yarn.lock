@@ -2017,16 +2017,16 @@ cidr-regex@^2.0.10:
     ip-regex "^2.1.0"
 
 circleci-bin@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/circleci-bin/-/circleci-bin-1.1.8.tgz#17fe771fed78fc29731baa38d6f31c607e40d384"
-  integrity sha512-bwiTXu8pE+nJw78nJDCzWhMm3DOdpIt+miltPJvC/4riXkWQrFdUXRp0jbWQO5WhmHfkCvc4sds7X0L6uq0HLg==
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/circleci-bin/-/circleci-bin-1.1.9.tgz#96b275fa6103ae755305e4b8798a8ea59c673c2d"
+  integrity sha512-TO5CbEKKHDsvokCE3/rvvyZIFCg9KZEcMloszq76IY4LbFr3ebHiWTZkDXCmpHFom7yMnJ0vBwAKOcn08/P6mQ==
   dependencies:
     decompress "4.2.0"
-    fs-extra "7.0.1"
-    node-fetch "2.3.0"
+    fs-extra "8.0.1"
+    node-fetch "2.6.0"
     node-uname "2.0.0"
     npm-run-all "4.1.5"
-    tempy "0.2.1"
+    tempy "0.3.0"
 
 circular-json@^0.3.1:
   version "0.3.3"
@@ -3304,7 +3304,16 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@7.0.1, fs-extra@^7.0.0:
+fs-extra@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.0.1.tgz#90294081f978b1f182f347a440a209154344285b"
+  integrity sha512-W+XLrggcDzlle47X/XnS7FXrXu9sDo+Ze9zpndeBxdgv88FHLm1HtmkhEwavruS6koanBjp098rUpHs65EmG7A==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
   integrity sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
@@ -5535,12 +5544,7 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
-  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
-
-node-fetch@^2.3.0:
+node-fetch@2.6.0, node-fetch@^2.3.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
@@ -7683,12 +7687,13 @@ temp-dir@^1.0.0:
   resolved "https://registry.yarnpkg.com/temp-dir/-/temp-dir-1.0.0.tgz#0a7c0ea26d3a39afa7e0ebea9c1fc0bc4daa011d"
   integrity sha1-CnwOom06Oa+n4OvqnB/AvE2qAR0=
 
-tempy@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/tempy/-/tempy-0.2.1.tgz#9038e4dbd1c201b74472214179bc2c6f7776e54c"
-  integrity sha512-LB83o9bfZGrntdqPuRdanIVCPReam9SOZKW0fOy5I9X3A854GGWi0tjCqoXEk84XIEYBc/x9Hq3EFop/H5wJaw==
+tempy@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tempy/-/tempy-0.3.0.tgz#6f6c5b295695a16130996ad5ab01a8bd726e8bf8"
+  integrity sha512-WrH/pui8YCwmeiAoxV+lpRH9HpRtgBhSR2ViBPgpGb/wnYDzp21R4MN45fsCGvLROvY67o3byhJRYRONJyImVQ==
   dependencies:
     temp-dir "^1.0.0"
+    type-fest "^0.3.1"
     unique-string "^1.0.0"
 
 term-size@^1.2.0:
@@ -7866,6 +7871,11 @@ type-check@~0.3.2:
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
+
+type-fest@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.3.1.tgz#63d00d204e059474fe5e1b7c011112bbd1dc29e1"
+  integrity sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
 
 type-fest@^0.4.1:
   version "0.4.1"
