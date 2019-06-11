@@ -1,0 +1,54 @@
+[
+  {
+    "queries": "IE 10",
+    "results": ["ie 10"]
+  },
+  {
+    "queries": ["IE 10", "Edge 18"],
+    "results": ["edge 18", "ie 10"]
+  },
+  {
+    "queries": "last 2 versions",
+    "results": [
+      "and_chr 73",
+      "and_ff 66",
+      "and_qq 1.2",
+      "and_uc 11.8",
+      "android 67",
+      "android 4.4.3-4.4.4",
+      "baidu 7.12",
+      "bb 10",
+      "bb 7",
+      "chrome 73",
+      "chrome 72",
+      "edge 18",
+      "edge 17",
+      "firefox 66",
+      "firefox 65",
+      "ie 11",
+      "ie 10",
+      "ie_mob 11",
+      "ie_mob 10",
+      "ios_saf 12.2",
+      "ios_saf 12.0-12.1",
+      "kaios 2.5",
+      "op_mini all",
+      "op_mob 46",
+      "op_mob 12.1",
+      "opera 58",
+      "opera 57",
+      "safari 12.1",
+      "safari 12",
+      "samsung 9.2",
+      "samsung 8.2"
+    ]
+  },
+  {
+    "queries": "Firefox 42",
+    "results": ["firefox 42"]
+  },
+  {
+    "queries": ["Chrome 72", "Opera 12", "Edge 18", "IE 10"],
+    "results": ["chrome 72", "edge 18", "ie 10", "opera 12"]
+  }
+]
