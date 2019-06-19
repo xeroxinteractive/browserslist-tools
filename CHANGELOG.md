@@ -1,3 +1,5 @@
+## [1.2.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.2.0...v1.2.1) (2019-06-19)
+
 # [1.2.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.1.2...v1.2.0) (2019-04-01)
 
 
