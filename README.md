@@ -2,7 +2,12 @@
 
 > Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
 
-[![circleci status][circleci-badge]][circleci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link]
+[![circleci status][circleci-badge]][circleci-link]
+[![npm package][npm-badge]][npm-link]
+[![license MIT][license-badge]][license]
+[![commit style angular][commit-style-badge]][commit-style-link]
+[![semantic-release][semantic-release-badge]][semantic-release-link]
+[![Dependabot Status][dependabot-badge]][dependabot-link]
 
 ## Setup
 __Important Note: In order to use this package a BrowserStack account with a valid Automate plan is required, a free trial is available.__
@@ -152,6 +157,8 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [semantic-release-badge]: https://flat.badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic%20release/e10079
 [semantic-release-link]: https://github.com/semantic-release/semantic-release
 
+[dependabot-badge]: https://flat.badgen.net/dependabot/xeroxinteractive/browserslist-browserstack?icon=dependabot
+[dependabot-link]: https://dependabot.com
 
 [browserslist-repo]: https://github.com/browserslist/browserslist
 [browserslist-js-api]: https://github.com/browserslist/browserslist#js-api
