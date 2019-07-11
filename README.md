@@ -15,9 +15,9 @@ __Important Note: In order to use this package a BrowserStack account with a val
 browserslist-browserstack is an npm module, so getting things up and running is simple.
 1. Install the npm module:
 ```bash
-yarn add browserslist-browserstack --dev
+yarn add @xerox/browserslist-browserstack --dev
 # or
-npm install browserslist-browserstack --save-dev
+npm install @xerox/browserslist-browserstack --save-dev
 ```
 2. Import it into a project (e.g. `browserstack.test.js` or whatever convention your testing suite uses):
 ```javascript
@@ -146,10 +146,10 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack/master
 [circleci-link]: https://circleci.com/gh/xeroxinteractive/browserslist-browserstack/tree/master
 
-[npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
-[npm-link]: https://www.npmjs.com/package/browserslist-browserstack
+[npm-badge]: https://flat.badgen.net/npm/v/@xerox/browserslist-browserstack?color=cyan
+[npm-link]: https://www.npmjs.com/package/@xerox/browserslist-browserstack
 
-[license-badge]: https://flat.badgen.net/npm/license/browserslist-browserstack
+[license-badge]: https://flat.badgen.net/npm/license/@xerox/browserslist-browserstack
 
 [commit-style-badge]: https://flat.badgen.net/badge/commit%20style/angular/purple
 [commit-style-link]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
