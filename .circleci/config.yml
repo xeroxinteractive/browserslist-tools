@@ -53,6 +53,7 @@ workflows:
     jobs:
       - install_lint_test
       - deploy:
+          context: npm
           requires:
             - install_lint_test
           filters:
