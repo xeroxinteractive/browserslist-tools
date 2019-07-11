@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.2.1...v1.2.2) (2019-06-21)
+
+
+### Bug Fixes
+
+* upgrade browserslist ([0ad6951](https://github.com/xeroxinteractive/browserslist-browserstack/commit/0ad6951))
+
+## [1.2.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.2.0...v1.2.1) (2019-06-19)
+
 # [1.2.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.1.2...v1.2.0) (2019-04-01)
 
 
