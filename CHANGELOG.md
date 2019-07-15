@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.0.0...v2.0.1) (2019-07-15)
+
+
+### Bug Fixes
+
+* remove audit + resolutions for dependabot ([f602d6c](https://github.com/xeroxinteractive/browserslist-browserstack/commit/f602d6c))
+
 # [2.0.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v1.2.2...v2.0.0) (2019-07-11)
 
 
