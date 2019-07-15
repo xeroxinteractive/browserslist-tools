@@ -15,7 +15,6 @@ jobs:
           keys:
             - node-10-cache-{{ checksum "./yarn.lock" }}
       - run: yarn install
-      - run: yarn audit
       - run: yarn lint
       - run: yarn type-check
       - run: yarn test
