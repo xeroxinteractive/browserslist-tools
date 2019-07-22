@@ -7,7 +7,7 @@ const fetch = jest.fn(
     json: async (): Promise<object> => {
       return response;
     },
-    ok: true
+    ok: true,
   })
 );
 

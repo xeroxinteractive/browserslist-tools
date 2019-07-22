@@ -66,7 +66,7 @@ export interface Capability extends Browser {
 
 export enum OperatingSystemFilter {
   WINDOWS = 'Windows',
-  OSX = 'OS X'
+  OSX = 'OS X',
 }
 
 export enum WindowsOperatingSystemVersionFilter {
@@ -74,7 +74,7 @@ export enum WindowsOperatingSystemVersionFilter {
   SEVEN = '7',
   EIGHT = '8',
   EIGHT_ONE = '8.1',
-  TEN = '10'
+  TEN = '10',
 }
 
 export enum OSXOperatingSystemVersionFilter {
@@ -86,7 +86,7 @@ export enum OSXOperatingSystemVersionFilter {
   EL_CAPITAN = 'El Capitan',
   SIERRA = 'Sierra',
   HIGH_SIERRA = 'High Sierra',
-  MOJAVE = 'Mojave'
+  MOJAVE = 'Mojave',
 }
 
 export enum BrowserFilter {
@@ -95,5 +95,5 @@ export enum BrowserFilter {
   IE = 'ie',
   CHROME = 'chrome',
   OPERA = 'opera',
-  EDGE = 'edge'
+  EDGE = 'edge',
 }

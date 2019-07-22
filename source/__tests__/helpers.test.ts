@@ -8,21 +8,21 @@ describe('filter', () => {
     expect(
       modulerUnderTest.filter('test', {
         include: [],
-        exclude: []
+        exclude: [],
       })
     ).toBe(true);
   });
   test('include', async () => {
     expect(
       modulerUnderTest.filter('test', {
-        include: ['test', 'lorem', 'ipsum']
+        include: ['test', 'lorem', 'ipsum'],
       })
     ).toBe(true);
   });
   test('exclude', async () => {
     expect(
       modulerUnderTest.filter('test', {
-        exclude: ['test', 'lorem', 'ipsum']
+        exclude: ['test', 'lorem', 'ipsum'],
       })
     ).toBe(false);
   });
@@ -30,7 +30,7 @@ describe('filter', () => {
     expect(
       modulerUnderTest.filter('test', {
         include: ['test'],
-        exclude: ['test']
+        exclude: ['test'],
       })
     ).toBe(false);
   });
