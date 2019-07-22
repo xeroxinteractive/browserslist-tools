@@ -5,7 +5,7 @@ import { getAllCapabilities, filterCapabilities } from './capabilities';
 const defaultOptions: Options = {
   username: process.env.BROWSER_STACK_USERNAME,
   accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
-  formatForSelenium: true
+  formatForSelenium: true,
 };
 
 /**
@@ -19,7 +19,7 @@ export default async function getCapabilities(
 ): Promise<Capability[]> {
   const options: Options = {
     ...defaultOptions,
-    ...userOptions
+    ...userOptions,
   };
   const allCapabilities = await getAllCapabilities(
     options.username,
@@ -36,7 +36,7 @@ export default async function getCapabilities(
         browser_version:
           !browser_version.includes('.') && !isNaN(parseFloat(browser_version))
             ? `${browser_version}.0`
-            : browser_version
+            : browser_version,
       };
     }
   );
@@ -50,7 +50,7 @@ export default async function getCapabilities(
       (capability: Capability): Capability => ({
         browserName: capability.browser,
         browserVersion: capability.browser_version,
-        ...capability
+        ...capability,
       })
     );
   } else {
@@ -66,5 +66,5 @@ export {
   Options,
   BrowsersListError,
   FetchError,
-  ResponseError
+  ResponseError,
 } from './types';

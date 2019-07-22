@@ -15,7 +15,7 @@ const browserslist = jest.fn(
       const temp = {
         queries,
         opts,
-        results: og
+        results: og,
       };
       throw new Error(
         `Please add an entry of:\n${JSON.stringify(
