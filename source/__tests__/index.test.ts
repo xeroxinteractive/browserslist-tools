@@ -7,8 +7,8 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'IE 10'
-          }
+            queries: 'IE 10',
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -17,8 +17,8 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: ['IE 10', 'Edge 18']
-          }
+            queries: ['IE 10', 'Edge 18'],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -27,8 +27,8 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'last 2 versions'
-          }
+            queries: 'last 2 versions',
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -37,8 +37,8 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'invalid'
-          }
+            queries: 'invalid',
+          },
         })
       ).rejects.toEqual(
         new moduleUnderTest.BrowsersListError(
@@ -54,8 +54,8 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'invalid'
-          }
+            queries: 'invalid',
+          },
         })
       ).rejects.toEqual(new moduleUnderTest.ResponseError('Unauthorized', 401));
     });
@@ -65,18 +65,18 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'IE 10'
+            queries: 'IE 10',
           },
           operatingSystems: {
-            include: [moduleUnderTest.OperatingSystemFilter.WINDOWS]
+            include: [moduleUnderTest.OperatingSystemFilter.WINDOWS],
           },
           operatingSystemVersion: {
             include: [
               moduleUnderTest.WindowsOperatingSystemVersionFilter.SEVEN,
               moduleUnderTest.WindowsOperatingSystemVersionFilter.TEN,
-              moduleUnderTest.WindowsOperatingSystemVersionFilter.XP
-            ]
-          }
+              moduleUnderTest.WindowsOperatingSystemVersionFilter.XP,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -85,17 +85,17 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'Firefox 42'
+            queries: 'Firefox 42',
           },
           operatingSystems: {
-            exclude: [moduleUnderTest.OperatingSystemFilter.OSX]
+            exclude: [moduleUnderTest.OperatingSystemFilter.OSX],
           },
           operatingSystemVersion: {
             exclude: [
               moduleUnderTest.WindowsOperatingSystemVersionFilter.EIGHT_ONE,
-              moduleUnderTest.WindowsOperatingSystemVersionFilter.EIGHT
-            ]
-          }
+              moduleUnderTest.WindowsOperatingSystemVersionFilter.EIGHT,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -104,19 +104,19 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: 'Firefox 42'
+            queries: 'Firefox 42',
           },
           operatingSystems: {
             include: [moduleUnderTest.OperatingSystemFilter.OSX],
-            exclude: [moduleUnderTest.OperatingSystemFilter.WINDOWS]
+            exclude: [moduleUnderTest.OperatingSystemFilter.WINDOWS],
           },
           operatingSystemVersion: {
             exclude: [
               moduleUnderTest.OSXOperatingSystemVersionFilter.LION,
               moduleUnderTest.OSXOperatingSystemVersionFilter.HIGH_SIERRA,
-              moduleUnderTest.WindowsOperatingSystemVersionFilter.EIGHT
-            ]
-          }
+              moduleUnderTest.WindowsOperatingSystemVersionFilter.EIGHT,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -127,14 +127,14 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10']
+            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
           browsers: {
             include: [
               moduleUnderTest.BrowserFilter.EDGE,
-              moduleUnderTest.BrowserFilter.IE
-            ]
-          }
+              moduleUnderTest.BrowserFilter.IE,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -142,14 +142,14 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10']
+            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
           browsers: {
             exclude: [
               moduleUnderTest.BrowserFilter.OPERA,
-              moduleUnderTest.BrowserFilter.CHROME
-            ]
-          }
+              moduleUnderTest.BrowserFilter.CHROME,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -157,15 +157,15 @@ describe('getCapabilities', () => {
       await expect(
         moduleUnderTest.default({
           browserslist: {
-            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10']
+            queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
           browsers: {
             include: [moduleUnderTest.BrowserFilter.EDGE],
             exclude: [
               moduleUnderTest.BrowserFilter.OPERA,
-              moduleUnderTest.BrowserFilter.CHROME
-            ]
-          }
+              moduleUnderTest.BrowserFilter.CHROME,
+            ],
+          },
         })
       ).resolves.toMatchSnapshot();
     });
@@ -173,9 +173,9 @@ describe('getCapabilities', () => {
     test('formatting for selenium', async () => {
       const capabilities = await moduleUnderTest.default({
         browserslist: {
-          queries: 'IE 10'
+          queries: 'IE 10',
         },
-        formatForSelenium: false
+        formatForSelenium: false,
       });
       for (const capability of capabilities) {
         expect(capability).not.toHaveProperty('browserName');

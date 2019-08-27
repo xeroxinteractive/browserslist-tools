@@ -8,63 +8,63 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
   [BrowserFilter.CHROME]: [
     {
       browser: 'chrome',
-      browser_version: '48.0'
+      browser_version: '48.0',
     },
     {
       browser: 'chrome',
-      browser_version: '49.0'
-    }
+      browser_version: '49.0',
+    },
   ],
   [BrowserFilter.EDGE]: [
     {
       browser: 'edge',
-      browser_version: '17.0'
+      browser_version: '17.0',
     },
     {
       browser: 'edge',
-      browser_version: '18.0'
-    }
+      browser_version: '18.0',
+    },
   ],
   [BrowserFilter.FIREFOX]: [
     {
       browser: 'firefox',
-      browser_version: '64.0'
+      browser_version: '64.0',
     },
     {
       browser: 'firefox',
-      browser_version: '65.0'
-    }
+      browser_version: '65.0',
+    },
   ],
   [BrowserFilter.IE]: [
     {
       browser: 'ie',
-      browser_version: '10.0'
+      browser_version: '10.0',
     },
     {
       browser: 'ie',
-      browser_version: '11.0'
-    }
+      browser_version: '11.0',
+    },
   ],
   [BrowserFilter.OPERA]: [
     {
       browser: 'opera',
-      browser_version: '12.15'
+      browser_version: '12.15',
     },
     {
       browser: 'opera',
-      browser_version: '12.16'
-    }
+      browser_version: '12.16',
+    },
   ],
   [BrowserFilter.SAFARI]: [
     {
       browser: 'safari',
-      browser_version: '11.0'
+      browser_version: '11.0',
     },
     {
       browser: 'safari',
-      browser_version: '12.0'
-    }
-  ]
+      browser_version: '12.0',
+    },
+  ],
 };
 
 function combine(...args: BrowserFilter[]): Browser[] {
@@ -89,11 +89,11 @@ describe('filterCapabilities', () => {
           mockSupportedCapabilities[type],
           {
             browsers: {
-              include: [type]
+              include: [type],
             },
             browserslist: {
-              queries: type
-            }
+              queries: type,
+            },
           }
         );
 
@@ -107,11 +107,11 @@ describe('filterCapabilities', () => {
         combine(BrowserFilter.SAFARI, BrowserFilter.IE),
         {
           browsers: {
-            include: [BrowserFilter.IE, BrowserFilter.SAFARI]
+            include: [BrowserFilter.IE, BrowserFilter.SAFARI],
           },
           browserslist: {
-            queries: ['ie', 'safari']
-          }
+            queries: ['ie', 'safari'],
+          },
         }
       );
 
@@ -138,11 +138,11 @@ describe('filterCapabilities', () => {
           mockAllSupportedCapabilities,
           {
             browsers: {
-              exclude: [type]
+              exclude: [type],
             },
             browserslist: {
-              queries: type
-            }
+              queries: type,
+            },
           }
         );
 
@@ -156,11 +156,11 @@ describe('filterCapabilities', () => {
         mockAllSupportedCapabilities,
         {
           browsers: {
-            exclude: [BrowserFilter.IE, BrowserFilter.SAFARI]
+            exclude: [BrowserFilter.IE, BrowserFilter.SAFARI],
           },
           browserslist: {
-            queries: ['ie', 'safari']
-          }
+            queries: ['ie', 'safari'],
+          },
         }
       );
 
@@ -181,11 +181,11 @@ describe('filterCapabilities', () => {
         {
           browsers: {
             include: [BrowserFilter.IE, BrowserFilter.SAFARI],
-            exclude: [BrowserFilter.SAFARI, BrowserFilter.CHROME]
+            exclude: [BrowserFilter.SAFARI, BrowserFilter.CHROME],
           },
           browserslist: {
-            queries: ['ie', 'safari']
-          }
+            queries: ['ie', 'safari'],
+          },
         }
       );
 
@@ -212,7 +212,7 @@ describe('matchCapability', () => {
         os: 'Windows',
         os_version: '10',
         device: null,
-        real_mobile: null
+        real_mobile: null,
       })
     ).toBe(true);
   });
@@ -224,7 +224,7 @@ describe('matchCapability', () => {
         os: 'OS X',
         os_version: 'Mojave',
         device: null,
-        real_mobile: null
+        real_mobile: null,
       })
     ).toBe(false);
   });
@@ -236,7 +236,7 @@ describe('matchCapability', () => {
         os: 'Windows',
         os_version: '7',
         device: null,
-        real_mobile: null
+        real_mobile: null,
       })
     ).toBe(false);
   });
