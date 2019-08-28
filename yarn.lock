@@ -1314,9 +1314,9 @@
     semver "5.5.0"
 
 "@xerox/eslint-config@^1.6.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@xerox/eslint-config/-/eslint-config-1.7.0.tgz#bb3453ed32a178ecd945c12bc22bbd2385966104"
-  integrity sha512-dlDo2XRXGtXrjGvJBfE4riM4Tioteujf1KuqawvYWWEX2yWC3NafUSPOa8vcSBlo0Fe6h3sDVT9K0ZSGCk7RFA==
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@xerox/eslint-config/-/eslint-config-1.7.1.tgz#e264f449b4c9fa270187ab12d0855020a8e08757"
+  integrity sha512-ykSOLjagRJdkXhbsp3+Wi5wcpqcWFKWhIVbWTi7EFbwomBsWM8Z+M9UU7EUEnAVFGhsQ5tzDu4wa3q1RURlq1w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^1.10.2"
     "@typescript-eslint/parser" "^1.10.2"
