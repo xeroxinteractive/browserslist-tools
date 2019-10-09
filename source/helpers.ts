@@ -38,7 +38,7 @@ export function arraysEqual(array1: any[], array2: any[]): boolean {
   if (array1.length !== array2.length) {
     return false;
   }
-  for (let index in array1) {
+  for (const index in array1) {
     const item1 = array1[index];
     const item2 = array2[index];
     const type1 = typeof item1;
