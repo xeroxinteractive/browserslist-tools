@@ -69,15 +69,13 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
 
 function combine(...args: BrowserFilter[]): Browser[] {
   const self = mockSupportedCapabilities[args.shift()];
-  return self.concat.apply(
-    self,
-    args.map((filter) => mockSupportedCapabilities[filter])
+  return self.concat(
+    ...args.map((filter) => mockSupportedCapabilities[filter])
   );
 }
 
-const mockAllSupportedCapabilities = combine.apply(
-  null,
-  Object.keys(mockSupportedCapabilities)
+const mockAllSupportedCapabilities = combine(
+  ...(Object.keys(mockSupportedCapabilities) as BrowserFilter[])
 );
 
 describe('filterCapabilities', () => {
