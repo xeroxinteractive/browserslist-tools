@@ -39,9 +39,9 @@ export function filterCapabilities(
 ): Capability[] {
   return allCapabilities.filter(
     (capability: Capability): boolean =>
-      filter(capability.browser, options.browsers) &&
-      filter(capability.os, options.operatingSystems) &&
-      filter(capability.os_version, options.operatingSystemVersion) &&
+      filter(capability.browser, options?.browsers) &&
+      filter(capability.os, options?.operatingSystems) &&
+      filter(capability.os_version, options?.operatingSystemVersion) &&
       matchCapability(allSupportedBrowsers, capability)
   );
 }

@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "declaration": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
     "esModuleInterop": true,
-    "outDir": "./build/"
+    "resolveJsonModule": true,
+    "baseUrl": "."
   },
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "__tests__",
+    "__mocks__",
+    "source"
+  ]
 }
