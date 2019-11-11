@@ -1,7 +1,7 @@
 jest.mock('node-fetch');
 
 import * as modulerUnderTest from '../capabilities';
-import { response as mockAllCapabilities } from '../__mocks__/browsers.json';
+import { response as mockAllCapabilities } from '../__specs__/browsers.json';
 import { BrowserFilter, Browser } from '../types';
 
 const mockSupportedCapabilities: { [key: string]: Browser[] } = {
@@ -67,16 +67,18 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
   ],
 };
 
-function combine(...args: BrowserFilter[]): Browser[] {
-  const self = mockSupportedCapabilities[args.shift()];
+function combine(first: BrowserFilter, ...args: BrowserFilter[]): Browser[] {
+  const self = mockSupportedCapabilities[first];
   return self.concat(
     ...args.map((filter) => mockSupportedCapabilities[filter])
   );
 }
 
-const mockAllSupportedCapabilities = combine(
-  ...(Object.keys(mockSupportedCapabilities) as BrowserFilter[])
-);
+const allSupportedCapabilityKeys = Object.keys(
+  mockSupportedCapabilities
+) as BrowserFilter[];
+const [first, ...rest] = allSupportedCapabilityKeys;
+const mockAllSupportedCapabilities = combine(first, ...rest);
 
 describe('filterCapabilities', () => {
   describe('include filtering', () => {

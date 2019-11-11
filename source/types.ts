@@ -48,7 +48,7 @@ export interface Options {
 
 export interface Browser {
   browser: string;
-  browser_version: string;
+  browser_version: string | null;
 }
 
 export interface Capability extends Browser {

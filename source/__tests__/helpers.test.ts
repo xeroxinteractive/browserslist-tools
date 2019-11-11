@@ -79,10 +79,28 @@ describe('arraysEqual', () => {
 
   test('2 dimensional array', () => {
     expect(
-      modulerUnderTest.arraysEqual([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+      modulerUnderTest.arraysEqual(
+        [
+          [1, 2],
+          [3, 4],
+        ],
+        [
+          [1, 2],
+          [3, 4],
+        ]
+      )
     ).toBeTruthy();
     expect(
-      modulerUnderTest.arraysEqual([[1, 2], [3, 4]], [[2, 1], [3, 4]])
+      modulerUnderTest.arraysEqual(
+        [
+          [1, 2],
+          [3, 4],
+        ],
+        [
+          [2, 1],
+          [3, 4],
+        ]
+      )
     ).toBeFalsy();
   });
 

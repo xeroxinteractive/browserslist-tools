@@ -1,4 +1,4 @@
-import responses from './queries.json';
+import responses from '../__specs__/queries.json';
 import { arraysEqual } from '../helpers';
 const original = require.requireActual('browserslist');
 

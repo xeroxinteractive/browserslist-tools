@@ -21,40 +21,47 @@ export default async function getCapabilities(
     ...defaultOptions,
     ...userOptions,
   };
-  const allCapabilities = await getAllCapabilities(
-    options.username,
-    options.accessKey
-  );
-  const allSupportedBrowsers = browserslist(
-    options.browserslist.queries,
-    options.browserslist.opts
-  ).map(
-    (browserString: string): Browser => {
-      const [browser, browser_version] = browserString.split(' ');
-      return {
-        browser,
-        browser_version:
-          !browser_version.includes('.') && !isNaN(parseFloat(browser_version))
-            ? `${browser_version}.0`
-            : browser_version,
-      };
-    }
-  );
-  const capabilites = filterCapabilities(
-    allCapabilities,
-    allSupportedBrowsers,
-    options
-  );
-  if (options.formatForSelenium) {
-    return capabilites.map(
-      (capability: Capability): Capability => ({
-        browserName: capability.browser,
-        browserVersion: capability.browser_version,
-        ...capability,
-      })
+  if (options.username && options.accessKey) {
+    const allCapabilities = await getAllCapabilities(
+      options.username,
+      options.accessKey
     );
+    const allSupportedBrowsers = browserslist(
+      options.browserslist?.queries,
+      options.browserslist?.opts
+    ).map(
+      (browserString: string): Browser => {
+        const [browser, browser_version] = browserString.split(' ');
+        return {
+          browser,
+          browser_version:
+            !browser_version.includes('.') &&
+            !isNaN(parseFloat(browser_version))
+              ? `${browser_version}.0`
+              : browser_version,
+        };
+      }
+    );
+    const capabilites = filterCapabilities(
+      allCapabilities,
+      allSupportedBrowsers,
+      options
+    );
+    if (options.formatForSelenium) {
+      return capabilites.map(
+        (capability: Capability): Capability => ({
+          browserName: capability.browser,
+          browserVersion: capability.browser_version ?? undefined,
+          ...capability,
+        })
+      );
+    } else {
+      return capabilites;
+    }
   } else {
-    return capabilites;
+    throw new TypeError(
+      'Missing either `username` or `accessKey`. Pass it via the options object or environment variables (BROWSER_STACK_USERNAME, BROWSER_STACK_ACCESS_KEY)'
+    );
   }
 }
 

@@ -1,11 +1,16 @@
+import { mocked } from 'ts-jest/utils';
 import * as moduleUnderTest from '../index';
-import mockFetch from '../__mocks__/node-fetch';
+import nodeFetch from 'node-fetch';
+
+const mockFetch = mocked(nodeFetch, true);
 
 describe('getCapabilities', () => {
   describe('browserslist options', () => {
     test('single browser query', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'IE 10',
           },
@@ -16,6 +21,8 @@ describe('getCapabilities', () => {
     test('multiple browser query', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: ['IE 10', 'Edge 18'],
           },
@@ -26,6 +33,8 @@ describe('getCapabilities', () => {
     test('last 2 versions', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'last 2 versions',
           },
@@ -36,6 +45,8 @@ describe('getCapabilities', () => {
     test('invalid query', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'invalid',
           },
@@ -53,17 +64,53 @@ describe('getCapabilities', () => {
       );
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'invalid',
           },
         })
       ).rejects.toEqual(new moduleUnderTest.ResponseError('Unauthorized', 401));
     });
+
+    test('no username', async () => {
+      await expect(
+        moduleUnderTest.default({
+          accessKey: '---accessKey---',
+        })
+      ).rejects.toEqual(
+        new TypeError(
+          'Missing either `username` or `accessKey`. Pass it via the options object or environment variables (BROWSER_STACK_USERNAME, BROWSER_STACK_ACCESS_KEY)'
+        )
+      );
+    });
+
+    test('no accessKey', async () => {
+      await expect(
+        moduleUnderTest.default({
+          username: '---username---',
+        })
+      ).rejects.toEqual(
+        new TypeError(
+          'Missing either `username` or `accessKey`. Pass it via the options object or environment variables (BROWSER_STACK_USERNAME, BROWSER_STACK_ACCESS_KEY)'
+        )
+      );
+    });
+
+    test('no username or accessKey', async () => {
+      await expect(moduleUnderTest.default({})).rejects.toEqual(
+        new TypeError(
+          'Missing either `username` or `accessKey`. Pass it via the options object or environment variables (BROWSER_STACK_USERNAME, BROWSER_STACK_ACCESS_KEY)'
+        )
+      );
+    });
   });
   describe('OS Filtering', () => {
     test('os + os version include filters', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'IE 10',
           },
@@ -84,6 +131,8 @@ describe('getCapabilities', () => {
     test('os + os version exclude filters', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'Firefox 42',
           },
@@ -103,6 +152,8 @@ describe('getCapabilities', () => {
     test('os + os version include + exclude filters', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: 'Firefox 42',
           },
@@ -126,6 +177,8 @@ describe('getCapabilities', () => {
     test('browser include filter', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
@@ -141,6 +194,8 @@ describe('getCapabilities', () => {
     test('browser exclude filter', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
@@ -156,6 +211,8 @@ describe('getCapabilities', () => {
     test('browser include + exclude filter', async () => {
       await expect(
         moduleUnderTest.default({
+          username: '---username---',
+          accessKey: '---accessKey---',
           browserslist: {
             queries: ['Chrome 72', 'Opera 12', 'Edge 18', 'IE 10'],
           },
@@ -172,6 +229,8 @@ describe('getCapabilities', () => {
 
     test('formatting for selenium', async () => {
       const capabilities = await moduleUnderTest.default({
+        username: '---username---',
+        accessKey: '---accessKey---',
         browserslist: {
           queries: 'IE 10',
         },

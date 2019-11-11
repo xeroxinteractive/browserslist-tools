@@ -1,6 +1,6 @@
 const { FetchError } = require.requireActual('node-fetch');
 
-import { response } from './browsers.json';
+import { response } from '../__specs__/browsers.json';
 
 const fetch = jest.fn(
   async (): Promise<object> => ({
