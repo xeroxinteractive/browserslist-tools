@@ -832,10 +832,10 @@
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-react "^7.12.4"
 
-"@xerox/prettier-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-1.1.1.tgz#7d1ede2a403a49bb1029879028c74ee2080e66a9"
-  integrity sha512-XmsgZbCR4R+QQKuvQsTBdchlimSHelkLJpf5wuETGb7zxwMyMcaKpt2lVg5PnQ2O1wNVg9j0ABWSc+rAHtFMcw==
+"@xerox/prettier-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-2.0.0.tgz#7580bb1f85eff4049cd41fd87babde68b5220f60"
+  integrity sha512-mq8KNJffapxoDUzqH0VWggNGzbE1m4mHsixo6n6mTqt1g2z3BOTk5tkDXMTn/O1JGlM5VCKJGudieSMtLpbNjQ==
 
 "@xerox/semantic-release-config@^2.0.0":
   version "2.0.0"
