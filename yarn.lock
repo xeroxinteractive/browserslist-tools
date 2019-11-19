@@ -787,10 +787,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@xerox/commitlint-config@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-1.0.1.tgz#0961fc6a0e93c7e72a12aaaf611e638b40be3fd0"
-  integrity sha512-MP14fATNFS5GlKBH/CAZuepEPOoFpfCbGMPOqPXHHWp/YELCnDnccsZ3Efix8I86UYysgUFXy9M0j3uCSSbPRg==
+"@xerox/commitlint-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.0.0.tgz#78c71b7aab22ede54e6d72f11dbb021350e645d5"
+  integrity sha512-uRyAbqEzmrWmvkBxUKfw8rJlnamQ4wTtfTtvSdHm4y2ND9h9W1deTBj0KkZUjl064YDSZydb9SHK/kkzSu0lZA==
   dependencies:
     "@commitlint/cli" "^8.0.0"
     "@commitlint/config-conventional" "^8.0.0"
