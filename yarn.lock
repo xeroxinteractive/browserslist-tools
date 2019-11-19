@@ -815,10 +815,10 @@
   resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-1.1.1.tgz#7d1ede2a403a49bb1029879028c74ee2080e66a9"
   integrity sha512-XmsgZbCR4R+QQKuvQsTBdchlimSHelkLJpf5wuETGb7zxwMyMcaKpt2lVg5PnQ2O1wNVg9j0ABWSc+rAHtFMcw==
 
-"@xerox/semantic-release-config@^1.4.0":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-1.4.1.tgz#7ef9a72a0ea84089ca7bb109674afdbbb3bfb80b"
-  integrity sha512-QeHae+56evSCP1BNfBMuEbNQLPbzAuhSef4y50ZQdZJcM5xPwGt0YtcgftbbQhe0Bot3LSQXVPqrgW9+W5xltA==
+"@xerox/semantic-release-config@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-2.0.0.tgz#8571fde8284a6580c0a52e05b25858449db84e90"
+  integrity sha512-HYOAKrgzzhMpTW2joC1GdBRTYoHclH5W+G10FFDWhJfwsP1unu+xAjMuTe1wUYo5o/ZuIeGA1IFG8uaehvHx4g==
   dependencies:
     "@semantic-release/changelog" "^3.0.4"
     "@semantic-release/commit-analyzer" "^6.2.0"
