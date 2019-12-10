@@ -58,11 +58,11 @@ const mockSupportedCapabilities: { [key: string]: Browser[] } = {
   [BrowserFilter.SAFARI]: [
     {
       browser: 'safari',
-      browser_version: '11.0',
+      browser_version: '12.1',
     },
     {
       browser: 'safari',
-      browser_version: '12.0',
+      browser_version: '13.0',
     },
   ],
 };

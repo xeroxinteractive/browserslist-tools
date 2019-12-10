@@ -87,6 +87,7 @@ export enum OSXOperatingSystemVersionFilter {
   SIERRA = 'Sierra',
   HIGH_SIERRA = 'High Sierra',
   MOJAVE = 'Mojave',
+  CATALINA = 'Catalina',
 }
 
 export enum BrowserFilter {
