@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.0.4...v2.1.0) (2019-12-10)
+
+
+### Features
+
+* catalina/safari 13 support ([7ac920e](https://github.com/xeroxinteractive/browserslist-browserstack/commit/7ac920e))
+
 ## [2.0.4](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.0.3...v2.0.4) (2019-11-18)
 
 ## [2.0.3](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.0.2...v2.0.3) (2019-08-28)
