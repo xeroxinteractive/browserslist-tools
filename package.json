@@ -1,6 +1,6 @@
 {
   "name": "@xerox/browserslist-browserstack",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Run BrowserStack tests for all browsers in project’s Browserslist config (with additional include/exclude filters).",
   "keywords": [
     "browserslist",
