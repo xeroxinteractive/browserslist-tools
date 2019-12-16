@@ -810,9 +810,9 @@
     tsutils "^3.17.1"
 
 "@xerox/commitlint-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.0.0.tgz#78c71b7aab22ede54e6d72f11dbb021350e645d5"
-  integrity sha512-uRyAbqEzmrWmvkBxUKfw8rJlnamQ4wTtfTtvSdHm4y2ND9h9W1deTBj0KkZUjl064YDSZydb9SHK/kkzSu0lZA==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.0.1.tgz#96b8ffd7f20008b4d9afe5df0b6b929212e0ccfe"
+  integrity sha512-dkrZuZX7iUzuYTJurz3fW0/B0KTe78zR1xZ3j3hlgFV7g6oCdUkXBAJcYq1wqof+qBe8jI3PUFFRSgbjVRY1xg==
   dependencies:
     "@commitlint/cli" "^8.0.0"
     "@commitlint/config-conventional" "^8.0.0"
