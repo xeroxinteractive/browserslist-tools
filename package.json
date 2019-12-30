@@ -54,7 +54,7 @@
     "@commitlint/cli": "^8.2.0",
     "@types/browserslist": "4.4.0",
     "@types/jest": "^24.0.19",
-    "@types/node": "^12.12.7",
+    "@types/node": "^13.1.1",
     "@types/node-fetch": "^2.1.7",
     "@xerox/commitlint-config": "^2.0.0",
     "@xerox/eslint-config": "^2.0.1",

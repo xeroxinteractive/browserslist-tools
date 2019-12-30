@@ -1,4 +1,4 @@
-const { FetchError } = require.requireActual('node-fetch');
+const { FetchError } = jest.requireActual('node-fetch');
 
 import { response } from '../__specs__/browsers.json';
 
