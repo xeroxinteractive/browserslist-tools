@@ -838,9 +838,9 @@
     eslint-plugin-react "^7.17.0"
 
 "@xerox/prettier-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-2.0.0.tgz#7580bb1f85eff4049cd41fd87babde68b5220f60"
-  integrity sha512-mq8KNJffapxoDUzqH0VWggNGzbE1m4mHsixo6n6mTqt1g2z3BOTk5tkDXMTn/O1JGlM5VCKJGudieSMtLpbNjQ==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-2.1.0.tgz#1bc46ca4f906755e2a2449a1d8eba179bc4ba293"
+  integrity sha512-b1cANMGudVPu5q4MJZ8zHph3dDUf+yqwXdzDlJ5aSz4LA1k4Nu17c+fAKnxiyH0YGmUDRkGChKiTYBnTyX3Yzg==
 
 "@xerox/semantic-release-config@^2.0.0":
   version "2.0.0"
