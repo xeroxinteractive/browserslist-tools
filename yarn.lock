@@ -830,9 +830,9 @@
     husky "^3.0.0"
 
 "@xerox/eslint-config@^2.0.1":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@xerox/eslint-config/-/eslint-config-2.2.0.tgz#f744d864cfe3b7a2c76bd31e839ab1cfac938d54"
-  integrity sha512-nWh865wy+cP4UK2voEAOLaAovVFLXn/9QELv1n10l1kIPAx2nfk/ySNPdslxTZ8T/MZMc4GjmwPVBF61KQmlxg==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@xerox/eslint-config/-/eslint-config-2.2.1.tgz#64ed6fce3eb24ef9683cf817078e351b39524494"
+  integrity sha512-uSQO1k5XdGGwUbGpZSVed+tA8YnvmFPWjHc3FJgvBl6Ccfeme6eeRpe2q24+iotTQun7A2x4OcjIiF8wotKgCw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.13.0"
     "@typescript-eslint/parser" "^2.13.0"
