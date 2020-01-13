@@ -851,16 +851,16 @@
   integrity sha512-b1cANMGudVPu5q4MJZ8zHph3dDUf+yqwXdzDlJ5aSz4LA1k4Nu17c+fAKnxiyH0YGmUDRkGChKiTYBnTyX3Yzg==
 
 "@xerox/semantic-release-config@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-2.1.0.tgz#52bd0c4a9f4351e005699f671570899d7b668d3b"
-  integrity sha512-FVfvlIQgofPE9VwiF5mxB1GANUo4VXQtU387cBkA4NdID8IKDLMmc0e30UXnCJdRQA3sP50NMaQ9mBp3L0KjOg==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-2.2.0.tgz#2dd7b0d605e63b3b0d5202ae4aecb9fe325051c2"
+  integrity sha512-mVACtXVH7gAYQwfzjRKPR0fjGRdq1sTugRZjLTPfzLi0L6lskYsSqDOiRWddIYJYyNpMDh/o9PEfcAViwJjaKA==
   dependencies:
     "@semantic-release/changelog" "^3.0.6"
     "@semantic-release/commit-analyzer" "^6.2.0"
     "@semantic-release/git" "^7.0.12"
     "@semantic-release/npm" "^5.3.5"
     "@semantic-release/release-notes-generator" "^7.3.5"
-    semantic-release-slack-bot "github:AndrewLeedham/semantic-release-slack-bot#AL-repository-field"
+    semantic-release-slack-bot "^1.4.0"
 
 JSONStream@^1.0.4, JSONStream@^1.3.4, JSONStream@^1.3.5:
   version "1.3.5"
@@ -7027,18 +7027,10 @@ semantic-release-config-xerox@^1.1.0:
     "@semantic-release/release-notes-generator" "^7.2.0"
     semantic-release-slack-bot "^1.1.0"
 
-semantic-release-slack-bot@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/semantic-release-slack-bot/-/semantic-release-slack-bot-1.1.0.tgz#2117998dfbfb3ceefd90f3709d918a8af9d43d04"
-  integrity sha512-xsm8hip60Cy5yJu2yax1TMxK+GEMxMSALSp7kKgpROJltbScsZrdZrjyOurLiWsV5E4uFNPka3u1ulUCcgXiqQ==
-  dependencies:
-    "@semantic-release/error" "^2.2.0"
-    node-fetch "^2.3.0"
-
-"semantic-release-slack-bot@github:AndrewLeedham/semantic-release-slack-bot#AL-repository-field":
-  version "0.0.0-semantically-released"
-  uid d35f005796205ee66592a3d2200c2d6f264cacc2
-  resolved "https://codeload.github.com/AndrewLeedham/semantic-release-slack-bot/tar.gz/d35f005796205ee66592a3d2200c2d6f264cacc2"
+semantic-release-slack-bot@^1.1.0, semantic-release-slack-bot@^1.4.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/semantic-release-slack-bot/-/semantic-release-slack-bot-1.4.1.tgz#f7642bc4199fbbb89b16626b30519ff2c5247b6f"
+  integrity sha512-hX1pmKLIP9h7PU9pwUYAMmt3KDB5cjCK3Pm3ATd6blQSHgjkHmnZkaLIn/xAyqMwJxukf6N4H8tyv7uViV5apw==
   dependencies:
     "@semantic-release/error" "^2.2.0"
     node-fetch "^2.3.0"
