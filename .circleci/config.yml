@@ -34,6 +34,8 @@ jobs:
       - image: circleci/node:12
     <<: [*defaults, *install_lint_test]
   deploy:
+    docker:
+      - image: circleci/node:12
     <<: *defaults
     steps:
       - attach_workspace:
