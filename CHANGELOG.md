@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.2...v2.1.3) (2020-03-09)
+
+
+### Bug Fixes
+
+* upgrade semantic-release-config ([e42fe4f](https://github.com/xeroxinteractive/browserslist-browserstack/commit/e42fe4f))
+
 ## [2.1.2](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.1...v2.1.2) (2020-03-09)
 
 
