@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.1...v2.1.2) (2020-03-09)
+
+
+### Bug Fixes
+
+* missing git attributes ([#257](https://github.com/xeroxinteractive/browserslist-browserstack/issues/257)) ([4818f79](https://github.com/xeroxinteractive/browserslist-browserstack/commit/4818f79))
+
 ## [2.1.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.0...v2.1.1) (2019-12-13)
 
 # [2.1.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.0.4...v2.1.0) (2019-12-10)
