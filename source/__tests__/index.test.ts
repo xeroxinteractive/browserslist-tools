@@ -60,7 +60,7 @@ describe('getCapabilities', () => {
 
     test('invalid credentials', async () => {
       mockFetch.mockImplementationOnce((...args) =>
-        require.requireActual('node-fetch').default(...args)
+        jest.requireActual('node-fetch').default(...args)
       );
       await expect(
         moduleUnderTest.default({

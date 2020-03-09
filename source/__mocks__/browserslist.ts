@@ -1,6 +1,6 @@
 import responses from '../__specs__/queries.json';
 import { arraysEqual } from '../helpers';
-const original = require.requireActual('browserslist');
+const original = jest.requireActual('browserslist');
 
 const browserslist = jest.fn(
   (queries?: string | readonly string[], opts?: {}): string[] => {
