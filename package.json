@@ -82,6 +82,7 @@
     "https-proxy-agent": ">=2.2.3",
     "handlebars": ">=4.5.2",
     "acorn": ">=7.1.1",
-    "kind-of": ">=6.0.3"
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.3"
   }
 }
