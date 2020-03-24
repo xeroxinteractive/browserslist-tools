@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.4...v3.0.0) (2020-03-24)
+
+
+### chore
+
+* remove xerox prefix ([a6f81a5](https://github.com/xeroxinteractive/browserslist-browserstack/commit/a6f81a5))
+
+
+### BREAKING CHANGES
+
+* `@xerox/` prefix removed from npm package going forward
+
 ## [2.1.4](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.3...v2.1.4) (2020-03-24)
 
 ## [2.1.3](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v2.1.2...v2.1.3) (2020-03-09)
