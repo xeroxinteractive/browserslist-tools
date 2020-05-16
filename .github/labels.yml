@@ -26,3 +26,9 @@
 - name: security
   description: addresses a security vulnerability
   color: ff0000
+- name: good first issue
+  description: good issue for people new to the project
+  color: 7057ff
+- name: enhancement
+  description: adds a new feature or improves on an existing one
+  color: ad12cc
