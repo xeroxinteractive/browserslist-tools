@@ -1110,13 +1110,13 @@
     tsutils "^3.17.1"
 
 "@xerox/commitlint-config@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.1.1.tgz#7a72fef49fb8a27db471e7242edc420fb79713a3"
-  integrity sha512-sjM5rnf+fSWnn44dkNifGyotgEQITLUa/ld/hYeV3dtFgM/z3Oo5FVJ+ha75/k2OPaTKzzT4hCbiLSpVNsJlDw==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.1.2.tgz#a2972a51b41116b22a37790e2c4f6f8c43357e3b"
+  integrity sha512-jQUQBiL8OAdL4eTttIcfFf/TMYJ1LJ6YzYDq6MLtssxgusrGfcWVgatpBvEQp21/43PvcbuFSuenqFpaoLAcDw==
   dependencies:
     "@commitlint/cli" "^8.3.5"
     "@commitlint/config-conventional" "^8.3.4"
-    husky "^4.2.3"
+    husky "^4.2.5"
 
 "@xerox/eslint-config@^3.0.3":
   version "3.0.3"
@@ -3782,7 +3782,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^4.0.0, husky@^4.2.3:
+husky@^4.0.0, husky@^4.2.5:
   version "4.2.5"
   resolved "https://registry.yarnpkg.com/husky/-/husky-4.2.5.tgz#2b4f7622673a71579f901d9885ed448394b5fa36"
   integrity sha512-SYZ95AjKcX7goYVZtVZF2i6XiZcHknw50iXvY7b0MiGoj5RwdgRQNEHdb+gPDPCXKlzwrybjFjkL6FOj8uRhZQ==
