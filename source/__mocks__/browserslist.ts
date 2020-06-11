@@ -3,7 +3,10 @@ import { arraysEqual } from '../helpers';
 const original = jest.requireActual('browserslist');
 
 const browserslist = jest.fn(
-  (queries?: string | readonly string[], opts?: {}): string[] => {
+  (
+    queries?: string | readonly string[],
+    opts?: Record<string, any>
+  ): string[] => {
     for (const response of responses) {
       if (arraysEqual([queries], [response.queries])) {
         return response.results;
