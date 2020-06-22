@@ -54,7 +54,7 @@
     "preset": "ts-jest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^9.0.1",
     "@types/browserslist": "4.8.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^12.12.39",
