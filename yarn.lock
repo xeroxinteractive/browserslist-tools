@@ -1182,9 +1182,9 @@
   integrity sha512-sess42cMm+G4VMQqNoDImm8Ak4zeStmcWaQpwLs2hf3iUjN5wdMzvqyr49EXHPzNKxICCOSgZr8afU/E04jCnw==
 
 "@xerox/semantic-release-config@^2.2.2":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-2.3.1.tgz#4c06b0f3bb6a1f890e9e23bed26735f8616dfb0b"
-  integrity sha512-SymS/UL6xBKNd0kOb0bCxN8cvmWrzFugkLK6WRt5KWw/twDU3Aay4jG8JvsTTo+OtyNQzYsKZRm+WpPeprzPzA==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@xerox/semantic-release-config/-/semantic-release-config-2.3.2.tgz#c427f3c9d9e9b981f7528c9c424c528c756b1156"
+  integrity sha512-AyY6n1OlQeCc9prUUTdS3uFsqaf2My+lBiE3OnITmXnwi6e7+HACXLsi5S3OC+rYJDzR/CbXEKK0ilfezyOUYQ==
   dependencies:
     "@semantic-release/changelog" "^5.0.1"
     "@semantic-release/commit-analyzer" "^8.0.1"
