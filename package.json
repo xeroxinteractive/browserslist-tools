@@ -40,7 +40,7 @@
     ]
   },
   "release": {
-    "extends": "@xerox/semantic-release-config/npm"
+    "extends": "@xerox/semantic-release-config/npm-next"
   },
   "publishConfig": {
     "access": "public"
