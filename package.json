@@ -18,7 +18,7 @@
     "lint": "eslint ./source/ --ext .ts",
     "type-check": "tsc",
     "format": "yarn run lint --fix",
-    "deploy": "semantic-release",
+    "deploy": "semantic-release --branches release",
     "prepublishOnly": "yarn run build"
   },
   "engines": {

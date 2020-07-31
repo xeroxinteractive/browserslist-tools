@@ -2,7 +2,7 @@
 
 > Run BrowserStack tests for all browsers in project’s [Browserslist][browserslist-repo] config (with additional include/exclude filters).
 
-[![circleci status][circleci-badge]][circleci-link]
+[![ci status][ci-badge]][ci-link]
 [![npm package][npm-badge]][npm-link]
 [![license MIT][license-badge]][license]
 [![commit style angular][commit-style-badge]][commit-style-link]
@@ -143,8 +143,8 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [issues]: https://github.com/xeroxinteractive/browserslist-browserstack/issues
 
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/xeroxinteractive/browserslist-browserstack/master
-[circleci-link]: https://circleci.com/gh/xeroxinteractive/browserslist-browserstack/tree/master
+[ci-badge]: https://flat.badgen.net/github/checks/xeroxinteractive/browserslist-browserstack/release?label=ci
+[ci-link]: https://github.com/xeroxinteractive/browserslist-browserstack/actions?query=branch%3Arelease
 
 [npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
 [npm-link]: https://www.npmjs.com/package/browserslist-browserstack
