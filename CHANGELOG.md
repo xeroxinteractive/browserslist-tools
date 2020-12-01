@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.0.2...v3.1.0) (2020-12-01)
+
+
+### Features
+
+* node 14 support + TS 4.1 + actions cleanup ([c05b647](https://github.com/xeroxinteractive/browserslist-browserstack/commit/c05b647))
+
 ## [3.0.2](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.0.1...v3.0.2) (2020-07-31)
 
 ## [3.0.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.0.0...v3.0.1) (2020-05-16)
