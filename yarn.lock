@@ -1288,9 +1288,9 @@
     eslint-visitor-keys "^2.0.0"
 
 "@xerox/commitlint-config@^2.1.1":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.1.5.tgz#879a51eae6f1601f98afabd2ff781e81d4e7a8b6"
-  integrity sha512-8XLuLf+ZvmUE43l1NuPhSG77/7R2TYvPOblIYGtRY4XuOQTnKH3l2ufL3s2MwNjULsAp2xXNBQGR6lvAQ8j83g==
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@xerox/commitlint-config/-/commitlint-config-2.1.6.tgz#208a5651a0c1df8fcf5ca57165a02d3763035998"
+  integrity sha512-JomPw7Hylqxy9nemqe85D0l1rItF8RQJkEoSpFeDyh8zMIQnUyeVuzm2c9dNjX6i1fBsYDtYbQdtU3OyFAZEHg==
   dependencies:
     "@commitlint/cli" "^11.0.0"
     "@commitlint/config-conventional" "^11.0.0"
