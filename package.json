@@ -22,7 +22,7 @@
     "prepublishOnly": "yarn run build"
   },
   "engines": {
-    "node": ">=10 <=12"
+    "node": ">=10 <=14"
   },
   "browserslist": [
     "current node"
@@ -59,34 +59,22 @@
     "@types/jest": "^26.0.0",
     "@types/node": "^12.12.39",
     "@types/node-fetch": "^2.1.7",
-    "@xerox/commitlint-config": "^2.1.1",
-    "@xerox/eslint-config": "^3.1.3",
-    "@xerox/prettier-config": "^2.2.1",
-    "@xerox/semantic-release-config": "^2.2.2",
+    "@xerox/commitlint-config": "^2.1.6",
+    "@xerox/eslint-config": "^3.1.9",
+    "@xerox/prettier-config": "^2.2.6",
+    "@xerox/semantic-release-config": "^2.3.5",
     "eslint": "^7.2.0",
     "husky": "^4.0.0",
     "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
     "jest-package-audit": "^3.1.2",
     "prettier": "^2.0.2",
-    "semantic-release": "^17.0.4",
+    "semantic-release": "^17.3.0",
     "ts-jest": "^26.0.0",
-    "typescript": "^3.7.2"
+    "typescript": "^4.1.2"
   },
   "dependencies": {
-    "browserslist": "^4.6.3",
+    "browserslist": "^4.14.7",
     "node-fetch": "^2.3.0"
-  },
-  "resolutions": {
-    "set-value": ">=2.0.1",
-    "mem": ">=4.0.0",
-    "https-proxy-agent": ">=2.2.3",
-    "handlebars": ">=4.5.2",
-    "acorn": ">=7.1.1",
-    "kind-of": ">=6.0.3",
-    "minimist": ">=1.2.3",
-    "yargs-parser": ">=13.1.2 <14.0.0 || >=15.0.1 <16.0.0 || >=18.1.2",
-    "@types/node": "^12.12.39",
-    "dot-prop": ">=5.1.1"
   }
 }

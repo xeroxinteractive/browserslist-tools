@@ -82,25 +82,24 @@ const mockAllSupportedCapabilities = combine(first, ...rest);
 
 describe('filterCapabilities', () => {
   describe('include filtering', () => {
-    for (const type of Object.values(BrowserFilter)) {
-      test(type, async () => {
-        const filtered = modulerUnderTest.filterCapabilities(
-          mockAllCapabilities,
-          mockSupportedCapabilities[type],
-          {
-            browsers: {
-              include: [type],
-            },
-            browserslist: {
-              queries: type,
-            },
-          }
-        );
+    test.each(Object.values(BrowserFilter))('%s', async (type) => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockSupportedCapabilities[type],
+        {
+          browsers: {
+            include: [type],
+          },
+          browserslist: {
+            queries: type,
+          },
+        }
+      );
 
-        expect(filtered.length).toBeGreaterThan(0);
-        expect(filtered.every(({ browser }) => browser === type)).toBe(true);
-      });
-    }
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(filtered.every(({ browser }) => browser === type)).toBe(true);
+    });
+
     test('safari + ie', async () => {
       const filtered = modulerUnderTest.filterCapabilities(
         mockAllCapabilities,
@@ -131,25 +130,24 @@ describe('filterCapabilities', () => {
     });
   });
   describe('exclude filtering', () => {
-    for (const type of Object.values(BrowserFilter)) {
-      test(type, async () => {
-        const filtered = modulerUnderTest.filterCapabilities(
-          mockAllCapabilities,
-          mockAllSupportedCapabilities,
-          {
-            browsers: {
-              exclude: [type],
-            },
-            browserslist: {
-              queries: type,
-            },
-          }
-        );
+    test.each(Object.values(BrowserFilter))('%s', async (type) => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockAllSupportedCapabilities,
+        {
+          browsers: {
+            exclude: [type],
+          },
+          browserslist: {
+            queries: type,
+          },
+        }
+      );
 
-        expect(filtered.length).toBeGreaterThan(0);
-        expect(filtered.every(({ browser }) => browser !== type)).toBe(true);
-      });
-    }
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(filtered.every(({ browser }) => browser !== type)).toBe(true);
+    });
+
     test('safari + ie', async () => {
       const filtered = modulerUnderTest.filterCapabilities(
         mockAllCapabilities,

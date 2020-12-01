@@ -143,21 +143,21 @@ See [node-fetch docs][node-fetch-error-handling] and [Browserslist docs][browser
 [issues]: https://github.com/xeroxinteractive/browserslist-browserstack/issues
 
 
-[ci-badge]: https://flat.badgen.net/github/checks/xeroxinteractive/browserslist-browserstack/release?label=ci
+[ci-badge]: https://img.shields.io/github/workflow/status/xeroxinteractive/config/Publish?logo=github&style=flat-square
 [ci-link]: https://github.com/xeroxinteractive/browserslist-browserstack/actions?query=branch%3Arelease
 
-[npm-badge]: https://flat.badgen.net/npm/v/browserslist-browserstack?color=cyan
+[npm-badge]: https://img.shields.io/npm/v/browserslist-browserstack?style=flat-square&color=cyan
 [npm-link]: https://www.npmjs.com/package/browserslist-browserstack
 
-[license-badge]: https://flat.badgen.net/npm/license/browserslist-browserstack
+[license-badge]: https://img.shields.io/badge/license-MIT-blue?style=flat-square
 
-[commit-style-badge]: https://flat.badgen.net/badge/commit%20style/angular/purple
+[commit-style-badge]: https://img.shields.io/badge/commit%20style-angular-blueviolet?style=flat-square
 [commit-style-link]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
 
-[semantic-release-badge]: https://flat.badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic%20release/e10079
+[semantic-release-badge]: https://shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic%20release-e10079?style=flat-square
 [semantic-release-link]: https://github.com/semantic-release/semantic-release
 
-[dependabot-badge]: https://flat.badgen.net/dependabot/xeroxinteractive/browserslist-browserstack?icon=dependabot
+[dependabot-badge]: https://img.shields.io/badge/Dependabot-daily-blue?style=flat-square&logo=dependabot
 [dependabot-link]: https://dependabot.com
 
 [browserslist-repo]: https://github.com/browserslist/browserslist
