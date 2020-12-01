@@ -1313,9 +1313,9 @@
     eslint-plugin-react "^7.21.4"
 
 "@xerox/prettier-config@^2.2.1":
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-2.2.5.tgz#5ae8f9fff460d273ff69708ffff9f9b4dbfa7c72"
-  integrity sha512-Dd29P19tgOlnF+rXX/MtdoOWxyAcYwOinklBzXvteHNFg+BV2uUCC9NCUYKTVjIwQRZFkUQOSQVYpiOknheX3Q==
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@xerox/prettier-config/-/prettier-config-2.2.6.tgz#02662f36fbff21393f1a487ad2a539fde24103b9"
+  integrity sha512-yQtaBkqCQ3ns0kqU3ztGdN9djFPxCPLatfi9FLEJMLC25mzR90uadJp6D2wWmT6hHYkC5OQfvj3oMVJMHMIPDg==
 
 "@xerox/semantic-release-config@^2.2.2":
   version "2.3.4"
