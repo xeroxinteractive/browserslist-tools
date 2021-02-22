@@ -64,7 +64,7 @@
     "@xerox/prettier-config": "^2.2.6",
     "@xerox/semantic-release-config": "^2.3.5",
     "eslint": "^7.2.0",
-    "husky": "^5.0.9",
+    "husky": "^4.3.8",
     "jest": "^26.0.1",
     "jest-circus": "^26.0.1",
     "jest-package-audit": "^3.1.2",
