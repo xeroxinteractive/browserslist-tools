@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.1.0...v3.1.1) (2021-02-22)
+
+
+### Bug Fixes
+
+* open up node versions ([a592ecd](https://github.com/xeroxinteractive/browserslist-browserstack/commit/a592ecd))
+
 # [3.1.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.0.2...v3.1.0) (2020-12-01)
 
 
