@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -52,7 +52,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: ${{ matrix.node-version}}-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: 14-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}

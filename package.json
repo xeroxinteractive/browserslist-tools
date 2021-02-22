@@ -22,7 +22,7 @@
     "prepublishOnly": "yarn run build"
   },
   "engines": {
-    "node": ">=10 <=14"
+    "node": ">=10"
   },
   "browserslist": [
     "current node"
