@@ -11,7 +11,7 @@ const defaultOptions: Options = {
 /**
  * Gets a list of capabilities from BrowserStack's REST API filtered using browser and os options as well as browserslist queries.
  *
- * @param userOptions - The options specified by the user to use when getting capabilites.
+ * @param userOptions - The options specified by the user to use when getting capabilities.
  * @returns A list of filtered capabilities.
  */
 export default async function getCapabilities(
@@ -42,13 +42,13 @@ export default async function getCapabilities(
         };
       }
     );
-    const capabilites = filterCapabilities(
+    const capabilities = filterCapabilities(
       allCapabilities,
       allSupportedBrowsers,
       options
     );
     if (options.formatForSelenium) {
-      return capabilites.map(
+      return capabilities.map(
         (capability: Capability): Capability => ({
           browserName: capability.browser,
           browserVersion: capability.browser_version ?? undefined,
@@ -56,7 +56,7 @@ export default async function getCapabilities(
         })
       );
     } else {
-      return capabilites;
+      return capabilities;
     }
   } else {
     throw new TypeError(

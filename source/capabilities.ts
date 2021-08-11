@@ -3,7 +3,7 @@ import { filter } from './helpers';
 import fetch from 'node-fetch';
 
 /**
- * Checkes if a given capability appears in a list of browsers matched from browerslist queries.
+ * Checks if a given capability appears in a list of browsers matched from browserslist queries.
  *
  * @param allSupportedBrowsers - A list of browsers matched from browserslist queries.
  * @param capability - A capability to check against the given list of supported browsers.
@@ -25,9 +25,9 @@ export function matchCapability(
 }
 
 /**
- * Filters a given list of capabilites using the a list of supported browsers and include/exclude options.
+ * Filters a given list of capabilities using the a list of supported browsers and include/exclude options.
  *
- * @param allCapabilities - A list of capabilites from BrowserStack's API.
+ * @param allCapabilities - A list of capabilities from BrowserStack's API.
  * @param allSupportedBrowsers - A list of browsers matched from browserslist queries.
  * @param options - The options to use when filtering capabilities.
  * @returns The given list of all capabilities filtered using the given supported browsers and options.
@@ -47,10 +47,10 @@ export function filterCapabilities(
 }
 
 /**
- * Gets a list of all possible capabilites for a given account.
+ * Gets a list of all possible capabilities for a given account.
  *
  * @param username - A BrowserStack account username to authenticate a BrowserStack REST API request.
- * @param accessKey - A BrowerStack account access key to authenticate a BrowserStack REST API request.
+ * @param accessKey - A BrowserStack account access key to authenticate a BrowserStack REST API request.
  * @returns The JSON response from the BrowserStack REST API Request.
  */
 export async function getAllCapabilities(
