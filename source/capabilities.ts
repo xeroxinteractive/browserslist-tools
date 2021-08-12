@@ -42,6 +42,7 @@ export function filterCapabilities(
       filter(capability.browser, options?.browsers) &&
       filter(capability.os, options?.operatingSystems) &&
       filter(capability.os_version, options?.operatingSystemVersion) &&
+      filter(capability.device, options?.devices) &&
       matchCapability(allSupportedBrowsers, capability)
   );
 }
