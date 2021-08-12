@@ -2,7 +2,14 @@ jest.mock('node-fetch');
 
 import * as modulerUnderTest from '../capabilities';
 import { response as mockAllCapabilities } from '../__specs__/browsers.json';
-import { BrowserFilter, Browser, Capability } from '../types';
+import {
+  BrowserFilter,
+  Browser,
+  Capability,
+  OperatingSystemFilter,
+  OSXOperatingSystemVersionFilter,
+  DeviceFilter,
+} from '../types';
 
 const mockSupportedCapabilities: { [key: string]: Capability[] } = {
   [BrowserFilter.CHROME]: [
@@ -169,6 +176,43 @@ describe('filterCapabilities', () => {
         )
       ).toBe(true);
     });
+
+    test('iphone', async () => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockSupportedCapabilities['iphone'],
+        {
+          browsers: {
+            include: [BrowserFilter.IPHONE],
+          },
+        }
+      );
+
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(
+        filtered.some(({ browser }) => browser === BrowserFilter.IPHONE)
+      ).toBe(true);
+    });
+
+    test('device', async () => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockSupportedCapabilities['iphone'],
+        {
+          browsers: {
+            include: [BrowserFilter.IPHONE],
+          },
+          devices: {
+            include: [DeviceFilter.IPHONE_XS_MAX],
+          },
+        }
+      );
+
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(
+        filtered.some(({ device }) => device === DeviceFilter.IPHONE_XS_MAX)
+      ).toBe(true);
+    });
   });
   describe('exclude filtering', () => {
     test.each(Object.values(BrowserFilter))('%s', async (type) => {
@@ -231,6 +275,60 @@ describe('filterCapabilities', () => {
       expect(filtered.length).toBeGreaterThan(0);
       expect(
         filtered.every(({ browser }) => browser === BrowserFilter.IE)
+      ).toBe(true);
+    });
+
+    test('iphone + safari', async () => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockAllSupportedCapabilities,
+        {
+          browsers: {
+            include: [BrowserFilter.IPHONE, BrowserFilter.SAFARI],
+            exclude: [
+              BrowserFilter.SAFARI,
+              BrowserFilter.CHROME,
+              BrowserFilter.IE,
+            ],
+          },
+          browserslist: {
+            queries: ['ie', 'safari', 'chrome'],
+          },
+        }
+      );
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(
+        filtered.every(({ browser }) => browser === BrowserFilter.IPHONE)
+      ).toBe(true);
+    });
+
+    test('chrome + big sur', async () => {
+      const filtered = modulerUnderTest.filterCapabilities(
+        mockAllCapabilities,
+        mockAllSupportedCapabilities,
+        {
+          browsers: {
+            include: [BrowserFilter.CHROME],
+            exclude: [BrowserFilter.SAFARI, BrowserFilter.IE],
+          },
+          browserslist: {
+            queries: ['ie', 'safari', 'chrome'],
+          },
+          operatingSystems: {
+            include: [OperatingSystemFilter.OSX],
+          },
+          operatingSystemVersion: {
+            include: [OSXOperatingSystemVersionFilter.BIG_SUR],
+          },
+        }
+      );
+
+      expect(filtered.length).toBeGreaterThan(0);
+      expect(
+        filtered.every(
+          ({ os_version }) =>
+            os_version === OSXOperatingSystemVersionFilter.BIG_SUR
+        )
       ).toBe(true);
     });
   });
