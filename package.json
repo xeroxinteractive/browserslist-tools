@@ -67,7 +67,6 @@
     "husky": "^4.3.8",
     "jest": "^26.0.1",
     "jest-circus": "^27.0.1",
-    "jest-package-audit": "^3.1.2",
     "prettier": "^2.0.2",
     "semantic-release": "^17.3.0",
     "ts-jest": "^26.0.0",
