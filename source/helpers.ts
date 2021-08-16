@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Filters } from './types';
+import { Capability, Filters } from './types';
 
 /**
  * Determines whether a given value should be filtered out or not, using an array of valid include values and invalid exclude values.
@@ -63,3 +63,38 @@ export function arraysEqual(array1: any[], array2: any[]): boolean {
   }
   return true;
 }
+
+// define a loose version of Object so it can be extended
+const looseObj: { [k: string]: any } = {};
+
+export const formatForSelenium = (capabilities: [Capability]) => {
+  return capabilities.map(
+    (capability: Capability): Capability => ({
+      browserName: capability.browser,
+      browserVersion: capability.browser_version ?? undefined,
+      ...capability,
+    })
+  );
+};
+
+export const formatForKarma = (
+  capabilities: [Capability],
+  browserBase: string
+) => {
+  const res = {} as typeof looseObj;
+  // store each capability in a separate key with a browser name as the key
+  capabilities.forEach((capability) => {
+    // extend the object
+    capability.base = browserBase;
+    // define a unique browser name
+    const { browser, browser_version, os, os_version } = capability;
+    const karmaBrowserName = `bs_${browser}_${browser_version}_${os}_${os_version}`;
+    // set the browser name as the key for the capabilities object
+    res[karmaBrowserName] = capability;
+  });
+
+  return {
+    browsers: Object.keys(res),
+    customLaunchers: res,
+  };
+};

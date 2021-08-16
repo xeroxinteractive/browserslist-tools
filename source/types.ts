@@ -47,7 +47,7 @@ export interface Options {
     | AndroidOperatingSystemVersionFilter
   >;
   devices?: Filters<DeviceFilter>;
-  formatForSelenium?: boolean;
+  format?: Function | false;
 }
 
 export interface Browser {
@@ -66,6 +66,8 @@ export interface Capability extends Browser {
   // selenium
   browserName?: string;
   browserVersion?: string;
+  // browserStack
+  base?: string;
 }
 
 export enum OperatingSystemFilter {

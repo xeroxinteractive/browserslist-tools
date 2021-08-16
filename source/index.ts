@@ -1,11 +1,12 @@
 import browserslist from 'browserslist';
 import { Capability, Options, Browser } from './types';
 import { getAllCapabilities, filterCapabilities } from './capabilities';
+import { formatForSelenium } from './helpers';
 
 const defaultOptions: Options = {
   username: process.env.BROWSER_STACK_USERNAME,
   accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
-  formatForSelenium: true,
+  format: formatForSelenium,
 };
 
 /**
@@ -47,14 +48,8 @@ export default async function getCapabilities(
       allSupportedBrowsers,
       options
     );
-    if (options.formatForSelenium) {
-      return capabilities.map(
-        (capability: Capability): Capability => ({
-          browserName: capability.browser,
-          browserVersion: capability.browser_version ?? undefined,
-          ...capability,
-        })
-      );
+    if (typeof options.format === 'function') {
+      return options.format(capabilities);
     } else {
       return capabilities;
     }
@@ -75,3 +70,4 @@ export {
   FetchError,
   ResponseError,
 } from './types';
+export { formatForSelenium, formatForKarma } from './helpers';

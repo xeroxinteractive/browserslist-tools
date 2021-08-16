@@ -1,6 +1,7 @@
 import { mocked } from 'ts-jest/utils';
 import * as moduleUnderTest from '../index';
 import nodeFetch from 'node-fetch';
+import { formatForKarma } from '../helpers';
 
 const mockFetch = mocked(nodeFetch, true);
 
@@ -234,12 +235,26 @@ describe('getCapabilities', () => {
         browserslist: {
           queries: 'IE 10',
         },
-        formatForSelenium: false,
+        format: false,
       });
       for (const capability of capabilities) {
         expect(capability).not.toHaveProperty('browserName');
         expect(capability).not.toHaveProperty('browserVersion');
       }
+    });
+
+    test('formatting for karma', async () => {
+      const capabilities = await moduleUnderTest.default({
+        username: '---username---',
+        accessKey: '---accessKey---',
+        browserslist: {
+          queries: 'IE 10',
+        },
+        format: formatForKarma,
+      });
+
+      expect(capabilities).toHaveProperty('browsers');
+      expect(capabilities).toHaveProperty('customLaunchers');
     });
   });
 });

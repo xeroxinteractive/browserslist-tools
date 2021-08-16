@@ -68,7 +68,7 @@ _Note: none of these options are required, by default `getCapabilities` will jus
 | operatingSystems.exclude | `Array` | A list of [OperatingSystemFilter's](#OperatingSystemFilter) to exclude in the capabilities list. | `[OperatingSystemFilter.OSX]` | `[]` |
 | operatingSystemVersion.include | `Array` | A list of [operatingSystemVersion's](#operatingSystemVersion) to include in the capabilities list. | `[operatingSystemVersion.SEVEN, operatingSystemVersion.XP]` | `[]` |
 | operatingSystemVersion.exclude | `Array` | A list of [operatingSystemVersion's](#operatingSystemVersion) to exclude in the capabilities list. | `[operatingSystemVersion.EL_CAPITAN, operatingSystemVersion.HIGH_SIERRA]` | `[]` |
-| formatForSelenium | `Boolean` | Whether to add browserName and browserVersion properties to the outputted capabilites, as selenium does not understand BrowserStack's `browser` and `browser_version` equivelants. | `false` | `true`
+| format | `Function` | User defined function that accepts `[Capabilities]` as an argument. Should return a formatted `capabilities` Object. Defaults to `formatForSelenium()` helper, which is exported by the package. Optional.
 
 ## Types
 These are the core types exported by `browserslist-browserstack`.
