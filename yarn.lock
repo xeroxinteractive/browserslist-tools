@@ -5322,14 +5322,6 @@ jest-mock@^27.0.6:
     "@jest/types" "^27.0.6"
     "@types/node" "*"
 
-jest-package-audit@^3.1.2:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/jest-package-audit/-/jest-package-audit-3.2.0.tgz#f853b2bdb0f14a8f0220497213cced27a6460117"
-  integrity sha512-keGSx24KF4HT9B4JnxpqRyrWWCV5PYv29qYjk3MWLsOXcX2tsydPlCtK3RRaQwwM0KMoOj1YCmeQWJPp/tpQ0A==
-  dependencies:
-    cross-spawn "^7.0.0"
-    pkg-dir "^5.0.0"
-
 jest-pnp-resolver@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/jest-pnp-resolver/-/jest-pnp-resolver-1.2.2.tgz#b704ac0ae028a89108a4d040b3f919dfddc8e33c"
