@@ -59,7 +59,7 @@
     "@types/jest": "^26.0.0",
     "@types/node": "^14.14.10",
     "@types/node-fetch": "^2.1.7",
-    "@xerox/commitlint-config": "^2.1.6",
+    "@xerox/commitlint-config": "^3.0.0",
     "@xerox/eslint-config": "^3.1.9",
     "@xerox/prettier-config": "^2.2.6",
     "@xerox/semantic-release-config": "^2.3.5",
