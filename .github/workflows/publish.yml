@@ -32,7 +32,7 @@ jobs:
       - run: pnpm install
       - run: pnpm nx affected:lint
       - run: pnpm nx affected:test
-      - run: pnpm nx build
+      - run: pnpm nx affected:build
       - name: Modify Workspace File
         run: sed -e "s|'packages\/|'dist/|" pnpm-workspace.yaml > pnpm-new.yaml && mv pnpm-new.yaml pnpm-workspace.yaml
       - name: Switch to changsets prerelease mode
