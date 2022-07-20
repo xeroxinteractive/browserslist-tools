@@ -1,0 +1,42 @@
+{
+  "root": "packages/browserstack",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/browserstack",
+        "tsConfig": "packages/browserstack/tsconfig.lib.json",
+        "packageJson": "packages/browserstack/package.json",
+        "main": "packages/browserstack/index.js",
+        "assets": [
+          "packages/browserstack/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/browserstack/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/packages/browserstack"
+      ],
+      "options": {
+        "jestConfig": "packages/browserstack/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+
+name: Check
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'next'
+      - uses: pnpm/action-setup@v2.2.1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm nx affected:lint
+      - run: pnpm nx affected:test
+      - run: pnpm nx affected:build
