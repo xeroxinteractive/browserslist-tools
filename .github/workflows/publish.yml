@@ -37,11 +37,11 @@ jobs:
         run: sed -e "s|'packages\/|'dist/|" pnpm-workspace.yaml > pnpm-new.yaml && mv pnpm-new.yaml pnpm-workspace.yaml
       - name: Switch to changsets prerelease mode
         if: github.ref == 'refs/heads/next'
-        run: pnpx changeset pre enter
+        run: pnpm changeset pre enter
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
-          publish: pnpx changeset publish
+          publish: pnpm changeset publish
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
