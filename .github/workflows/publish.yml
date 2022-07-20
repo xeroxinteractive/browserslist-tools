@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - release
+      - next
 
 name: Publish
 
@@ -34,6 +35,9 @@ jobs:
       - run: pnpm nx build
       - name: Modify Workspace File
         run: sed -e "s|'packages\/|'dist/|" pnpm-workspace.yaml > pnpm-new.yaml && mv pnpm-new.yaml pnpm-workspace.yaml
+      - name: Switch to changsets prerelease mode
+        if: github.ref == 'refs/heads/next'
+        run: pnpx changeset pre enter
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
