@@ -1,10 +1,10 @@
 import browserslist from 'browserslist';
-import { Capability, Options, Browser } from './types';
-import { getAllCapabilities, filterCapabilities } from './capabilities';
+import { Capability, Options, Browser } from './library/types';
+import { getAllCapabilities, filterCapabilities } from './library/capabilities';
 
 const defaultOptions: Options = {
-  username: process.env.BROWSER_STACK_USERNAME,
-  accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
+  username: process.env['BROWSER_STACK_USERNAME'],
+  accessKey: process.env['BROWSER_STACK_ACCESS_KEY'],
   formatForSelenium: true,
 };
 
@@ -29,19 +29,16 @@ export default async function getCapabilities(
     const allSupportedBrowsers = browserslist(
       options.browserslist?.queries,
       options.browserslist?.opts
-    ).map(
-      (browserString: string): Browser => {
-        const [browser, browser_version] = browserString.split(' ');
-        return {
-          browser,
-          browser_version:
-            !browser_version.includes('.') &&
-            !isNaN(parseFloat(browser_version))
-              ? `${browser_version}.0`
-              : browser_version,
-        };
-      }
-    );
+    ).map((browserString: string): Browser => {
+      const [browser, browser_version] = browserString.split(' ');
+      return {
+        browser,
+        browser_version:
+          !browser_version.includes('.') && !isNaN(parseFloat(browser_version))
+            ? `${browser_version}.0`
+            : browser_version,
+      };
+    });
     const capabilities = filterCapabilities(
       allCapabilities,
       allSupportedBrowsers,
@@ -74,4 +71,4 @@ export {
   BrowsersListError,
   FetchError,
   ResponseError,
-} from './types';
+} from './library/types';
