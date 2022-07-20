@@ -16,7 +16,9 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "nx run-many --all --target=test"
+    "test": "nx run-many --all --target=test",
+    "lint": "nx run-many --all --target=lint",
+    "build": "nx run-many --all --target=build"
   },
   "devDependencies": {
     "@changesets/cli": "2.23.2",
