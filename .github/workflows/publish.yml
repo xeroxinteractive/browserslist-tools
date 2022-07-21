@@ -48,7 +48,7 @@ jobs:
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
-          publish: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && pnpm changeset publish
+          publish: pnpm changeset publish
           setupGitUser: false
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
