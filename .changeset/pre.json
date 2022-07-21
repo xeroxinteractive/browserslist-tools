@@ -6,6 +6,7 @@
     "browserslist-browserstack": "2.1.1"
   },
   "changesets": [
+    "fresh-grapes-deny",
     "many-pots-walk"
   ]
 }

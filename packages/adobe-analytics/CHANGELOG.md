@@ -1,5 +1,11 @@
 # browserslist-adobe-analytics
 
+## 1.1.2-next.1
+
+### Patch Changes
+
+- 337233d: Bump for new build process
+
 ## 1.1.2-next.0
 
 ### Patch Changes
