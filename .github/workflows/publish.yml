@@ -42,9 +42,12 @@ jobs:
         uses: andstor/file-existence-action@v1
         with:
           files: '.changeset/pre.json'
-      - name: Switch to changsets prerelease mode
+      - name: Enter prerelease mode (Next)
         if: github.ref == 'refs/heads/next' && steps.check_files.outputs.file_exists == 'false'
         run: pnpm changeset pre enter next
+      - name: Exit prerelease mode (Release)
+        if: github.ref == 'refs/heads/release' && steps.check_files.outputs.file_exists == 'true'
+        run: pnpm changeset pre exit
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
