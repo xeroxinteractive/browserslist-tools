@@ -62,3 +62,6 @@ typings/
 
 # dist folder
 dist/
+
+# Prevent generated .npmrc from being committed
+.npmrc
