@@ -27,8 +27,6 @@ jobs:
         with:
           main-branch-name: 'next'
       - uses: pnpm/action-setup@v2.2.1
-      - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
@@ -50,7 +48,7 @@ jobs:
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset publish
+          publish: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc && pnpm changeset publish
           setupGitUser: false
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
