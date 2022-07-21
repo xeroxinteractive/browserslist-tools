@@ -38,6 +38,10 @@ jobs:
       - name: Switch to changsets prerelease mode
         if: github.ref == 'refs/heads/next'
         run: pnpm changeset pre enter next
+      - name: Setup Git User
+        run: |
+          git config --global user.email "andrew.leedham@xerox.com"
+          git config --global user.name "Andrew Leedham"
       - name: Publish with changesets
         uses: changesets/action@v1
         with:
