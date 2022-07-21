@@ -40,8 +40,12 @@ jobs:
       - run: pnpm nx affected:build
       - name: Modify Workspace File
         run: sed -e "s|'packages\/|'dist/|" pnpm-workspace.yaml > pnpm-new.yaml && mv pnpm-new.yaml pnpm-workspace.yaml
+      - name: 'Check if already in pre mode'
+        uses: andstor/file-existence-action@v1
+        with:
+          files: '.changeset/pre.json'
       - name: Switch to changsets prerelease mode
-        if: github.ref == 'refs/heads/next'
+        if: github.ref == 'refs/heads/next' && steps.check_files.outputs.file_exists == 'false'
         run: pnpm changeset pre enter next
       - name: Publish with changesets
         uses: changesets/action@v1
