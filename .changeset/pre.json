@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "browserslist-adobe-analytics": "1.1.1",
+    "browserslist-browserstack": "2.1.1"
+  },
+  "changesets": [
+    "many-pots-walk"
+  ]
+}
