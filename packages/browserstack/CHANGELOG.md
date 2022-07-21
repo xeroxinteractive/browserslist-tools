@@ -1,5 +1,11 @@
 # [3.1.0](https://github.com/xeroxinteractive/browserslist-browserstack/compare/v3.0.2...v3.1.0) (2020-12-01)
 
+## 2.1.2-next.1
+
+### Patch Changes
+
+- 337233d: Bump for new build process
+
 ## 2.1.2-next.0
 
 ### Patch Changes
