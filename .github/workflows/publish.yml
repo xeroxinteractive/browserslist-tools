@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: 16.x
       - uses: bahmutov/npm-install@v1
-      - run: yarn nx affected:lint
-      - run: yarn nx affected:test
-      - run: yarn nx affected:build
+      - run: nx affected:lint
+      - run: nx affected:test
+      - run: nx affected:build
       - name: Publish to GitHub Packages
         if: github.ref == 'refs/heads/release' || github.ref == 'refs/heads/next'
         run: |

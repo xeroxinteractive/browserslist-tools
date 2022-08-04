@@ -25,6 +25,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - uses: bahmutov/npm-install@v1
-      - run: yarn nx affected:lint
-      - run: yarn nx affected:test
-      - run: yarn nx affected:build
+      - run: nx affected:lint
+      - run: nx affected:test
+      - run: nx affected:build
