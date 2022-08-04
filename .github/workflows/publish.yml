@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 16.x
       - uses: bahmutov/npm-install@v1
+      - run: yarn global add nx
       - run: nx affected:lint
       - run: nx affected:test
       - run: nx affected:build
