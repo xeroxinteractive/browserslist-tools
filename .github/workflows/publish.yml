@@ -30,6 +30,7 @@ jobs:
       - name: Publish to GitHub Packages
         if: github.ref == 'refs/heads/release' || github.ref == 'refs/heads/next'
         run: |
+          echo '{ "version": "independent", "npmClient": "yarn", "packages": [ "packages/dist/*" ] }' > lerna.json
           npx auto shipit
         env:
           SLACK_WEBHOOK_URL: ${{secrets.NPM_SLACK_WEBHOOK}}

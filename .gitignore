@@ -63,5 +63,5 @@ typings/
 # dist folder
 dist/
 
-# Prevent generated .npmrc from being committed
-.npmrc
+# Prevent generated lerna.json from being committed
+lerna.json
