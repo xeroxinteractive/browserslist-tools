@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
       - uses: nrwl/nx-set-shas@v2
         with:
           main-branch-name: 'next'
