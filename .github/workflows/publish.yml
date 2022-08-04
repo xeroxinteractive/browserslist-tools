@@ -10,49 +10,26 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-      - name: Setup Git User
-        run: |
-          git config --global user.email "andrew.leedham@xerox.com"
-          git config --global user.name "Andrew Leedham"
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.REPO_GITHUB_TOKEN }}
       - uses: nrwl/nx-set-shas@v2
         with:
           main-branch-name: 'next'
-      - uses: pnpm/action-setup@v2.2.1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm nx affected:lint
-      - run: pnpm nx affected:test
-      - run: pnpm nx affected:build
-      - name: Modify Workspace File
-        run: sed -e "s|'packages\/|'dist/|" pnpm-workspace.yaml > pnpm-new.yaml && mv pnpm-new.yaml pnpm-workspace.yaml
-      - name: 'Check if already in pre mode'
-        uses: andstor/file-existence-action@v1
-        with:
-          files: '.changeset/pre.json'
-      - name: Enter prerelease mode (Next)
-        if: github.ref == 'refs/heads/next' && steps.check_files.outputs.file_exists == 'false'
-        run: pnpm changeset pre enter next
-      - name: Exit prerelease mode (Release)
-        if: github.ref == 'refs/heads/release' && steps.check_files.outputs.file_exists == 'true'
-        run: pnpm changeset pre exit
-      - name: Publish with changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm changeset publish
-          setupGitUser: false
+          node-version: 16.x
+      - uses: bahmutov/npm-install@v1
+      - run: yarn nx affected:lint
+      - run: yarn nx affected:test
+      - run: yarn nx affected:build
+      - name: Publish to GitHub Packages
+        if: github.ref == 'refs/heads/release' || github.ref == 'refs/heads/next'
+        run: |
+          npx auto shipit
         env:
+          SLACK_WEBHOOK_URL: ${{secrets.NPM_SLACK_WEBHOOK}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
