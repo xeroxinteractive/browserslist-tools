@@ -1,6 +1,6 @@
 {
   "name": "browserslist-browserstack",
-  "version": "3.1.1",
+  "version": "3.1.2-next.1",
   "description": "Run BrowserStack tests for all browsers in project’s Browserslist config (with additional include/exclude filters).",
   "keywords": [
     "browserslist",
