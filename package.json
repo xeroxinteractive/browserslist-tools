@@ -21,20 +21,22 @@
     "build": "nx run-many --all --target=build"
   },
   "devDependencies": {
+    "@auto-it/slack": "^10.37.4",
     "@changesets/cli": "2.23.2",
-    "@nrwl/cli": "latest",
-    "@nrwl/jest": "latest",
-    "@nrwl/js": "latest",
-    "@nrwl/linter": "latest",
-    "@nrwl/node": "14.4.2",
-    "@nrwl/nx-cloud": "latest",
-    "@nrwl/workspace": "latest",
+    "@nrwl/cli": "14.5.2",
+    "@nrwl/jest": "14.5.2",
+    "@nrwl/js": "14.5.2",
+    "@nrwl/linter": "14.5.2",
+    "@nrwl/node": "14.5.2",
+    "@nrwl/nx-cloud": "14.3.0",
+    "@nrwl/workspace": "14.5.2",
     "@types/jest": "28.1.5",
     "@types/node": "16.11.44",
     "@types/node-fetch": "2.6.2",
     "@types/semver": "7.3.10",
     "@xerox/eslint-config": "5.0.2",
     "@xerox/prettier-config": "4.0.0",
+    "auto": "^10.37.4",
     "eslint": "8.20.0",
     "eslint-import-resolver-typescript": "3.2.7",
     "eslint-plugin-import": "2.26.0",
@@ -49,8 +51,12 @@
     "typescript": "4.7.4"
   },
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "root"
+  ],
   "dependencies": {
     "tslib": "2.4.0"
   },
-  "packageManager": "pnpm@7.5.2"
+  "packageManager": "yarn@1.22.17"
 }

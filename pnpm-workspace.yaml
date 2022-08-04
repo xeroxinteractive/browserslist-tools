@@ -1,4 +1,0 @@
-packages:
-  - 'packages/**'
-  - 'root'
-  - '!**/__tests__/**'
