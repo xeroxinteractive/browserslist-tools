@@ -21,14 +21,14 @@
     "build": "nx run-many --all --target=build"
   },
   "devDependencies": {
-    "@auto-it/slack": "10.37.4",
-    "@changesets/cli": "2.23.2",
+    "@auto-it/slack": "10.37.6",
+    "@changesets/cli": "2.24.4",
     "@nrwl/cli": "14.5.2",
     "@nrwl/jest": "14.5.2",
     "@nrwl/js": "14.5.2",
     "@nrwl/linter": "14.5.2",
     "@nrwl/node": "14.5.2",
-    "@nrwl/nx-cloud": "14.3.0",
+    "@nrwl/nx-cloud": "14.6.2",
     "@nrwl/workspace": "14.5.2",
     "@types/jest": "29.0.2",
     "@types/node": "16.11.44",
@@ -36,9 +36,9 @@
     "@types/semver": "7.3.10",
     "@xerox/eslint-config": "5.0.2",
     "@xerox/prettier-config": "4.0.0",
-    "auto": "10.37.4",
-    "eslint": "8.20.0",
-    "eslint-import-resolver-typescript": "3.2.7",
+    "auto": "10.37.6",
+    "eslint": "8.23.1",
+    "eslint-import-resolver-typescript": "3.5.1",
     "eslint-plugin-import": "2.26.0",
     "jest": "28.1.3",
     "jest-circus": "28.1.3",
@@ -47,9 +47,9 @@
     "mockdate": "3.0.5",
     "nx": "latest",
     "prettier": "2.7.1",
-    "ts-jest": "28.0.7",
+    "ts-jest": "28.0.8",
     "ts-node": "10.9.1",
-    "typescript": "4.7.4"
+    "typescript": "4.8.3"
   },
   "private": true,
   "workspaces": [
@@ -59,5 +59,5 @@
   "dependencies": {
     "tslib": "2.4.0"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.19"
 }
