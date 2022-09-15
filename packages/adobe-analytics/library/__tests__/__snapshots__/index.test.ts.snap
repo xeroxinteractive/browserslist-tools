@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getBrowserslistStats default options 1`] = `
-Object {
-  "and_chr": Object {
+{
+  "and_chr": {
     "81": 8.70075766660809,
   },
-  "and_ff": Object {
+  "and_ff": {
     "68": 0,
   },
-  "and_qq": Object {
+  "and_qq": {
     "1.2": 0,
   },
-  "and_uc": Object {
+  "and_uc": {
     "12.12": 0,
   },
-  "android": Object {
+  "android": {
     "2.1": 0,
     "2.2": 0,
     "2.3": 0,
@@ -26,14 +26,14 @@ Object {
     "4.4.3-4.4.4": 0,
     "81": 0,
   },
-  "baidu": Object {
+  "baidu": {
     "7.12": 0,
   },
-  "bb": Object {
+  "bb": {
     "10": 0,
     "7": 0,
   },
-  "chrome": Object {
+  "chrome": {
     "10": 0,
     "11": 0,
     "12": 0,
@@ -116,7 +116,7 @@ Object {
     "85": 0.7112638724844994,
     "9": 0,
   },
-  "edge": Object {
+  "edge": {
     "12": 0,
     "13": 0,
     "14": 0,
@@ -128,7 +128,7 @@ Object {
     "80": 0,
     "81": 0,
   },
-  "firefox": Object {
+  "firefox": {
     "10": 0,
     "11": 0,
     "12": 0,
@@ -209,7 +209,7 @@ Object {
     "8": 0,
     "9": 0,
   },
-  "ie": Object {
+  "ie": {
     "10": 0,
     "11": 11.37953668728521,
     "5.5": 0,
@@ -218,11 +218,11 @@ Object {
     "8": 0,
     "9": 0,
   },
-  "ie_mob": Object {
+  "ie_mob": {
     "10": 0,
     "11": 0,
   },
-  "ios_saf": Object {
+  "ios_saf": {
     "10.0-10.2": 0,
     "10.3": 0,
     "11.0-11.2": 0.14434775032391362,
@@ -244,13 +244,13 @@ Object {
     "9.0-9.2": 0,
     "9.3": 0,
   },
-  "kaios": Object {
+  "kaios": {
     "2.5": 0,
   },
-  "op_mini": Object {
+  "op_mini": {
     "all": 0,
   },
-  "op_mob": Object {
+  "op_mob": {
     "10": 0,
     "11": 0,
     "11.1": 0,
@@ -259,7 +259,7 @@ Object {
     "12.1": 0,
     "46": 0,
   },
-  "opera": Object {
+  "opera": {
     "10.0-10.1": 0,
     "10.5": 0,
     "10.6": 0,
@@ -324,7 +324,7 @@ Object {
     "9": 0,
     "9.5-9.6": 0,
   },
-  "safari": Object {
+  "safari": {
     "10": 0,
     "10.1": 0.6517920119746469,
     "11": 0,
@@ -347,7 +347,7 @@ Object {
     "9.1": 0,
     "TP": 0,
   },
-  "samsung": Object {
+  "samsung": {
     "10.1": 0.5907048663645268,
     "11.1": 0,
     "4": 0,

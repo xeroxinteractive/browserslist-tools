@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`normal behaviour 1`] = `
-Array [
+[
   "https://analytics.adobe.io/api/---global-id---/reports",
-  Object {
-    "body": "{\\"rsid\\":\\"---rsid---\\",\\"globalFilters\\":[{\\"type\\":\\"dateRange\\",\\"dateRange\\":\\"2019-08-01T00:00:00.000/2019-11-01T00:00:00.000\\"}],\\"metricContainer\\":{\\"metrics\\":[{\\"columnId\\":\\"0\\",\\"id\\":\\"metrics/visitors\\"}]},\\"dimension\\":\\"variables/browser\\",\\"settings\\":{\\"countRepeatInstances\\":true,\\"limit\\":50,\\"page\\":0,\\"nonesBehavior\\":\\"return-nones\\"}}",
-    "headers": Object {
+  {
+    "body": "{"rsid":"---rsid---","globalFilters":[{"type":"dateRange","dateRange":"2019-08-01T00:00:00.000/2019-11-01T00:00:00.000"}],"metricContainer":{"metrics":[{"columnId":"0","id":"metrics/visitors"}]},"dimension":"variables/browser","settings":{"countRepeatInstances":true,"limit":50,"page":0,"nonesBehavior":"return-nones"}}",
+    "headers": {
       "Authorization": "Bearer ---access-token---",
       "Content-Type": "application/json",
       "x-api-key": "---client-id---",
@@ -17,11 +17,11 @@ Array [
 `;
 
 exports[`private key from file 1`] = `
-Array [
+[
   "https://analytics.adobe.io/api/---global-id---/reports",
-  Object {
-    "body": "{\\"rsid\\":\\"---rsid---\\",\\"globalFilters\\":[{\\"type\\":\\"dateRange\\",\\"dateRange\\":\\"2019-08-01T00:00:00.000/2019-11-01T00:00:00.000\\"}],\\"metricContainer\\":{\\"metrics\\":[{\\"columnId\\":\\"0\\",\\"id\\":\\"metrics/visitors\\"}]},\\"dimension\\":\\"variables/browser\\",\\"settings\\":{\\"countRepeatInstances\\":true,\\"limit\\":50,\\"page\\":0,\\"nonesBehavior\\":\\"return-nones\\"}}",
-    "headers": Object {
+  {
+    "body": "{"rsid":"---rsid---","globalFilters":[{"type":"dateRange","dateRange":"2019-08-01T00:00:00.000/2019-11-01T00:00:00.000"}],"metricContainer":{"metrics":[{"columnId":"0","id":"metrics/visitors"}]},"dimension":"variables/browser","settings":{"countRepeatInstances":true,"limit":50,"page":0,"nonesBehavior":"return-nones"}}",
+    "headers": {
       "Authorization": "Bearer ---access-token---",
       "Content-Type": "application/json",
       "x-api-key": "---client-id---",

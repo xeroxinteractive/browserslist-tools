@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`actual data 1`] = `
-Object {
-  "and_chr": Object {
+{
+  "and_chr": {
     "81": 0,
   },
-  "and_ff": Object {
+  "and_ff": {
     "68": 0,
   },
-  "and_qq": Object {
+  "and_qq": {
     "1.2": 0,
   },
-  "and_uc": Object {
+  "and_uc": {
     "12.12": 0,
   },
-  "android": Object {
+  "android": {
     "2.1": 0,
     "2.2": 0,
     "2.3": 0,
@@ -26,14 +26,14 @@ Object {
     "4.4.3-4.4.4": 0,
     "81": 0,
   },
-  "baidu": Object {
+  "baidu": {
     "7.12": 0,
   },
-  "bb": Object {
+  "bb": {
     "10": 0,
     "7": 0,
   },
-  "chrome": Object {
+  "chrome": {
     "10": 0,
     "11": 0,
     "12": 0,
@@ -116,7 +116,7 @@ Object {
     "85": 0,
     "9": 0,
   },
-  "edge": Object {
+  "edge": {
     "12": 0,
     "13": 0,
     "14": 0,
@@ -128,7 +128,7 @@ Object {
     "80": 0,
     "81": 0,
   },
-  "firefox": Object {
+  "firefox": {
     "10": 0,
     "11": 0,
     "12": 0,
@@ -209,7 +209,7 @@ Object {
     "8": 0,
     "9": 0,
   },
-  "ie": Object {
+  "ie": {
     "10": 0,
     "11": 0,
     "5.5": 0,
@@ -218,11 +218,11 @@ Object {
     "8": 0,
     "9": 0,
   },
-  "ie_mob": Object {
+  "ie_mob": {
     "10": 0,
     "11": 0,
   },
-  "ios_saf": Object {
+  "ios_saf": {
     "10.0-10.2": 0,
     "10.3": 0,
     "11.0-11.2": 0,
@@ -244,13 +244,13 @@ Object {
     "9.0-9.2": 0,
     "9.3": 0,
   },
-  "kaios": Object {
+  "kaios": {
     "2.5": 0,
   },
-  "op_mini": Object {
+  "op_mini": {
     "all": 0,
   },
-  "op_mob": Object {
+  "op_mob": {
     "10": 0,
     "11": 0,
     "11.1": 0,
@@ -259,7 +259,7 @@ Object {
     "12.1": 0,
     "46": 0,
   },
-  "opera": Object {
+  "opera": {
     "10.0-10.1": 0,
     "10.5": 0,
     "10.6": 0,
@@ -324,7 +324,7 @@ Object {
     "9": 0,
     "9.5-9.6": 0,
   },
-  "safari": Object {
+  "safari": {
     "10": 0,
     "10.1": 0,
     "11": 0,
@@ -347,7 +347,7 @@ Object {
     "9.1": 0,
     "TP": 0,
   },
-  "samsung": Object {
+  "samsung": {
     "10.1": 0,
     "11.1": 0,
     "4": 0,
@@ -361,31 +361,31 @@ Object {
 `;
 
 exports[`actual ordering: and_chr 1`] = `
-Array [
+[
   "81",
 ]
 `;
 
 exports[`actual ordering: and_ff 1`] = `
-Array [
+[
   "68",
 ]
 `;
 
 exports[`actual ordering: and_qq 1`] = `
-Array [
+[
   "1.2",
 ]
 `;
 
 exports[`actual ordering: and_uc 1`] = `
-Array [
+[
   "12.12",
 ]
 `;
 
 exports[`actual ordering: android 1`] = `
-Array [
+[
   "3",
   "4",
   "81",
@@ -400,20 +400,20 @@ Array [
 `;
 
 exports[`actual ordering: baidu 1`] = `
-Array [
+[
   "7.12",
 ]
 `;
 
 exports[`actual ordering: bb 1`] = `
-Array [
+[
   "7",
   "10",
 ]
 `;
 
 exports[`actual ordering: chrome 1`] = `
-Array [
+[
   "4",
   "5",
   "6",
@@ -499,7 +499,7 @@ Array [
 `;
 
 exports[`actual ordering: edge 1`] = `
-Array [
+[
   "12",
   "13",
   "14",
@@ -514,7 +514,7 @@ Array [
 `;
 
 exports[`actual ordering: firefox 1`] = `
-Array [
+[
   "2",
   "3",
   "4",
@@ -598,7 +598,7 @@ Array [
 `;
 
 exports[`actual ordering: ie 1`] = `
-Array [
+[
   "6",
   "7",
   "8",
@@ -610,14 +610,14 @@ Array [
 `;
 
 exports[`actual ordering: ie_mob 1`] = `
-Array [
+[
   "10",
   "11",
 ]
 `;
 
 exports[`actual ordering: ios_saf 1`] = `
-Array [
+[
   "8",
   "13.4",
   "13.3",
@@ -642,19 +642,19 @@ Array [
 `;
 
 exports[`actual ordering: kaios 1`] = `
-Array [
+[
   "2.5",
 ]
 `;
 
 exports[`actual ordering: op_mini 1`] = `
-Array [
+[
   "all",
 ]
 `;
 
 exports[`actual ordering: op_mob 1`] = `
-Array [
+[
   "10",
   "11",
   "12",
@@ -666,7 +666,7 @@ Array [
 `;
 
 exports[`actual ordering: opera 1`] = `
-Array [
+[
   "9",
   "11",
   "12",
@@ -734,7 +734,7 @@ Array [
 `;
 
 exports[`actual ordering: safari 1`] = `
-Array [
+[
   "4",
   "5",
   "6",
@@ -760,7 +760,7 @@ Array [
 `;
 
 exports[`actual ordering: samsung 1`] = `
-Array [
+[
   "4",
   "11.1",
   "10.1",
