@@ -21,7 +21,7 @@
     "build": "nx run-many --all --target=build"
   },
   "devDependencies": {
-    "@auto-it/slack": "^10.37.4",
+    "@auto-it/slack": "10.37.4",
     "@changesets/cli": "2.23.2",
     "@nrwl/cli": "14.5.2",
     "@nrwl/jest": "14.5.2",
@@ -36,7 +36,7 @@
     "@types/semver": "7.3.10",
     "@xerox/eslint-config": "5.0.2",
     "@xerox/prettier-config": "4.0.0",
-    "auto": "^10.37.4",
+    "auto": "10.37.4",
     "eslint": "8.20.0",
     "eslint-import-resolver-typescript": "3.2.7",
     "eslint-plugin-import": "2.26.0",
