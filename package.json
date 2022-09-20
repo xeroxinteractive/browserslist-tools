@@ -45,7 +45,7 @@
     "jest-package-audit": "5.0.0",
     "lerna": "5.5.1",
     "mockdate": "3.0.5",
-    "nx": "latest",
+    "nx": "14.7.6",
     "prettier": "2.7.1",
     "ts-jest": "28.0.8",
     "ts-node": "10.9.1",
