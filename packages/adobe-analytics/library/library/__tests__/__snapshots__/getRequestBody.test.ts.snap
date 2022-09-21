@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getRequestBody default 1`] = `
-Object {
+{
   "dimension": "variables/browser",
-  "globalFilters": Array [
-    Object {
+  "globalFilters": [
+    {
       "dateRange": "2019-08-01T00:00:00.000/2019-11-01T00:00:00.000",
       "type": "dateRange",
     },
   ],
-  "metricContainer": Object {
-    "metrics": Array [
-      Object {
+  "metricContainer": {
+    "metrics": [
+      {
         "columnId": "0",
         "id": "metrics/visitors",
       },
     ],
   },
   "rsid": "---rsid---",
-  "settings": Object {
+  "settings": {
     "countRepeatInstances": true,
     "limit": 50,
     "nonesBehavior": "return-nones",
