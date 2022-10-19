@@ -1,7 +1,7 @@
 import * as moduleUnderTest from '../../index';
 import nodeFetch from 'node-fetch';
 
-const mockFetch = jest.mocked(nodeFetch, true);
+const mockFetch = jest.mocked(nodeFetch, { shallow: true });
 
 describe('getCapabilities', () => {
   describe('browserslist options', () => {

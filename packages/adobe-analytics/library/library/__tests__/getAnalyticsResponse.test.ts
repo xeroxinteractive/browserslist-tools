@@ -10,8 +10,8 @@ import MockDate from 'mockdate';
 import { FetchError } from '../../__mocks__/node-fetch';
 import { ResponseError } from '../../types';
 
-const mockFetch = jest.mocked(nodeFetch, true);
-const mockAuthenticate = jest.mocked(authenticate, true);
+const mockFetch = jest.mocked(nodeFetch, { shallow: true });
+const mockAuthenticate = jest.mocked(authenticate, { shallow: true });
 MockDate.set('2019-11-01T00:00:00.000');
 const mockReadFile = jest.fn();
 jest.mocked(util).promisify.mockImplementation(() => mockReadFile);
