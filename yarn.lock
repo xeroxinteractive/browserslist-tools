@@ -2144,12 +2144,12 @@
     chalk "4.1.0"
     tslib "^2.3.0"
 
-"@nrwl/nx-cloud@14.7.0":
-  version "14.7.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-14.7.0.tgz#71dc6663c9527001bbc374f8d1d841d166fd031f"
-  integrity sha512-sEGK5Ire5DC2liIsT89qR6SzZa46uinmWEAMz8ocMuu7nIMnwV9m15qajxhmYKasYsq9vTeT+x7BlZ4fnxPrNg==
+"@nrwl/nx-cloud@15.0.2":
+  version "15.0.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-15.0.2.tgz#1d1e9c52743f7d7a40c8217c211ebd22402f6dde"
+  integrity sha512-DaTASuXmGyQHMxJuK6y3f7fs+Q0qQCfYDIDVGK9muNwN/QItLeWdRNltLQxbrBeS112kQTu2FPsr0DmRD60+0A==
   dependencies:
-    axios "^0.21.1"
+    axios "^0.21.2"
     chalk "4.1.0"
     dotenv "~10.0.0"
     fs-extra "^10.1.0"
@@ -3496,7 +3496,7 @@ await-to-js@^3.0.0:
   resolved "https://registry.yarnpkg.com/await-to-js/-/await-to-js-3.0.0.tgz#70929994185616f4675a91af6167eb61cc92868f"
   integrity sha512-zJAaP9zxTcvTHRlejau3ZOY4V7SRpiByf3/dxx2uyKxxor19tpmpV2QRsTKikckwhaPmr2dVpxxMr7jOCYVp5g==
 
-axios@^0.21.1:
+axios@^0.21.2:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
