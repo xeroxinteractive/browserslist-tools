@@ -31,7 +31,7 @@
     "@nrwl/nx-cloud": "15.0.2",
     "@nrwl/workspace": "14.8.6",
     "@types/jest": "29.2.3",
-    "@types/node": "16.18.3",
+    "@types/node": "18.11.9",
     "@types/node-fetch": "2.6.2",
     "@types/semver": "7.3.13",
     "@xerox/eslint-config": "5.0.2",
