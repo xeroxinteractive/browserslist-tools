@@ -16,7 +16,7 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Prepare repository
         run: git fetch --unshallow --tags
-      - uses: nrwl/nx-set-shas@v2
+      - uses: nrwl/nx-set-shas@v3
         with:
           main-branch-name: 'next'
       - uses: actions/setup-node@v3
