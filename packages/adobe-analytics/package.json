@@ -27,7 +27,7 @@
     "@adobe/jwt-auth": "*",
     "@types/yargs": "*",
     "browserslist": "4.21.4",
-    "caniuse-lite": "1.0.30001431",
+    "caniuse-lite": "1.0.30001439",
     "moment": "2.29.4",
     "node-fetch": "2.6.7",
     "ora": "6.1.2",
