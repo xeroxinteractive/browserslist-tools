@@ -29,7 +29,7 @@
     "browserslist": "4.21.4",
     "caniuse-lite": "1.0.30001431",
     "moment": "2.29.4",
-    "node-fetch": "2.6.7",
+    "node-fetch": "3.3.0",
     "ora": "6.1.2",
     "semver": "7.3.8",
     "yargs": "17.6.2"
