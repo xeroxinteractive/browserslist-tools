@@ -59,5 +59,8 @@
   "dependencies": {
     "tslib": "2.4.1"
   },
+  "resolutions": {
+    "jsonwebtoken": ">=9.0.0"
+  },
   "packageManager": "yarn@1.22.19"
 }
