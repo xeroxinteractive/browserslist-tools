@@ -11,8 +11,8 @@
     "lib": ["es2017", "dom"],
     "baseUrl": ".",
     "paths": {
-      "browserslist-browserstack": ["packages/browserstack/index.ts"],
-      "browserslist-adove-analytics": ["packages/adobe-analytics/index.ts"]
+      "browserslist-adove-analytics": ["packages/adobe-analytics/index.ts"],
+      "browserslist-browserstack": ["packages/browserstack/index.ts"]
     }
   }
 }

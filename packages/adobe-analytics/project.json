@@ -1,37 +1,28 @@
 {
-  "root": "packages/adobe-analytics",
+  "name": "adobe-analytics",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/adobe-analytics",
         "tsConfig": "packages/adobe-analytics/tsconfig.lib.json",
         "packageJson": "packages/adobe-analytics/package.json",
         "main": "packages/adobe-analytics/index.js",
-        "assets": [
-          "packages/adobe-analytics/*.md"
-        ]
+        "assets": ["packages/adobe-analytics/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/adobe-analytics/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/adobe-analytics/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/adobe-analytics"
-      ],
+      "outputs": ["coverage/packages/adobe-analytics"],
       "options": {
         "jestConfig": "packages/adobe-analytics/jest.config.ts",
         "passWithNoTests": true
