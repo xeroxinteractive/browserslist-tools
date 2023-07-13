@@ -1,15 +1,12 @@
 {
-  "root": "root",
+  "name": "root",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "root/**/*.ts"
-        ]
+        "lintFilePatterns": ["root/**/*.ts"]
       }
     },
     "test": {
