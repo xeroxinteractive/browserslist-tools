@@ -136,7 +136,6 @@ export enum BrowserFilter {
   CHROME = 'chrome',
   OPERA = 'opera',
   EDGE = 'edge',
-  YANDEX = 'yandex',
   IPHONE = 'iphone',
   IPAD = 'ipad',
   ANDROID = 'android',
