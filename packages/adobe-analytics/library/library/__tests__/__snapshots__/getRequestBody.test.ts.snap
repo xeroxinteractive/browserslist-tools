@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getRequestBody default 1`] = `
+{
+  "dimension": "variables/browser",
+  "globalFilters": [
+    {
+      "dateRange": "2019-08-01T00:00:00.000/2019-11-01T00:00:00.000",
+      "type": "dateRange",
+    },
+  ],
+  "metricContainer": {
+    "metrics": [
+      {
+        "columnId": "0",
+        "id": "metrics/visitors",
+      },
+    ],
+  },
+  "rsid": "---rsid---",
+  "settings": {
+    "countRepeatInstances": true,
+    "limit": 50,
+    "nonesBehavior": "return-nones",
+    "page": 0,
+  },
+}
+`;

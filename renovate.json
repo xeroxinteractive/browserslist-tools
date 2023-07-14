@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboard": true,
+  "labels": [
+    "change: dependencies"
+  ],
+  "reviewers": [
+    "AndrewLeedham"
+  ],
+  "schedule": [
+    "before 9am on the 15th day of the month"
+  ],
+  "timezone": "Europe/London",
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "assignAutomerge": true,
+  "automergeStrategy": "merge-commit",
+  "extends": [
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    "group:allNonMajor",
+    "group:monorepos",
+    "group:recommended",
+    "group:definitelyTyped",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    ":semanticCommitsDisabled",
+    "workarounds:all"
+  ]
+}

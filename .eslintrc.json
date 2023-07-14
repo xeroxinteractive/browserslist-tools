@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": ["@xerox"],
+  "ignorePatterns": ["**/*"],
+  "overrides": [
+    {
+      "files": "*.{cjs,js,mjs}",
+      "rules": {}
+    },
+    {
+      "files": "*.ts",
+      "extends": ["@xerox/eslint-config/typescript"]
+    },
+    {
+      "files": "*.test.{cjs,js,mjs,ts}",
+      "extends": ["@xerox/eslint-config/jest"]
+    }
+  ]
+}

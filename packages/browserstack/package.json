@@ -1,0 +1,25 @@
+{
+  "name": "browserslist-browserstack",
+  "version": "3.1.2-next.2",
+  "description": "Run BrowserStack tests for all browsers in project’s Browserslist config (with additional include/exclude filters).",
+  "keywords": [
+    "browserslist",
+    "browserstack",
+    "integration-testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xeroxinteractive/browserslist-tools.git",
+    "directory": "packages/browserstack"
+  },
+  "author": "Andrew Leedham <Andrew.Leedham@xerox.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@types/node-fetch": "*",
+    "browserslist": "4.21.9",
+    "node-fetch": "2.6.12"
+  }
+}

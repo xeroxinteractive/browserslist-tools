@@ -1,23 +1,31 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-  "search.exclude": {
-    "node_modules/**/*": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
   },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "files.eol": "\n",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "[typescript]": {
-    "editor.formatOnSave": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "[yaml]": {
-    "editor.formatOnSave": true
-  },
-  "eslint.options": {
-    "extensions": [".ts"]
-  },
-  "eslint.validate": ["typescript"],
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }

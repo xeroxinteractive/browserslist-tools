@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
-# build folder
-build/
+# dist folder
+dist/
+
+# Prevent generated lerna.json from being committed
+lerna.json

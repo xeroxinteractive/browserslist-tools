@@ -2,65 +2,38 @@ on:
   push:
     branches:
       - release
+      - next
 
 name: Publish
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2
-        id: yarn-cache
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
+      - uses: nrwl/nx-set-shas@v3
         with:
-          path: |
-            node_modules
-          key: ${{ matrix.node-version}}-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn type-check
-      - run: yarn test
-
-  publish:
-    needs: test
-    runs-on: ubuntu-latest
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+          main-branch-name: 'next'
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: |
-            node_modules
-          key: 14-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
-      - run: yarn install
-      - name: Deploy
+          node-version: 16.x
+      - uses: bahmutov/npm-install@v1
+      - run: yarn global add nx
+      - run: nx affected:lint
+      - run: nx affected:test
+      - run: nx affected:build
+      - name: Publish to GitHub Packages
+        if: github.ref == 'refs/heads/release' || github.ref == 'refs/heads/next'
         run: |
-          yarn deploy
+          echo '{ "version": "independent", "npmClient": "yarn", "packages": [ "packages/dist/*" ] }' > lerna.json
+          npx auto shipit
         env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          SLACK_WEBHOOK: ${{secrets.NPM_SLACK_WEBHOOK}}
+          SLACK_WEBHOOK_URL: ${{secrets.NPM_SLACK_WEBHOOK}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
