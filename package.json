@@ -30,7 +30,7 @@
     "@nrwl/node": "16.5.1",
     "@nrwl/nx-cloud": "16.1.0",
     "@nrwl/workspace": "16.5.1",
-    "@types/jest": "29.5.1",
+    "@types/jest": "29.5.3",
     "@types/node": "18.16.19",
     "@types/node-fetch": "2.6.4",
     "@types/semver": "7.5.0",
