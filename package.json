@@ -21,7 +21,7 @@
     "build": "nx run-many --all --target=build"
   },
   "devDependencies": {
-    "@auto-it/slack": "10.46.0",
+    "@auto-it/slack": "11.0.1",
     "@changesets/cli": "2.26.2",
     "@nrwl/cli": "15.9.3",
     "@nrwl/jest": "16.5.2",
