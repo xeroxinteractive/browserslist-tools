@@ -20,7 +20,7 @@
   "license": "MIT",
   "type": "commonjs",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "dependencies": {
     "@types/caniuse-lite": "*",
