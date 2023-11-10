@@ -27,10 +27,13 @@ export default function getBaseStats(): Stats {
             return b[1] - a[1];
           }
         })
-        .reduce((versions, [version]) => {
-          versions[version] = 0;
-          return versions;
-        }, {} as { [version: string]: number });
+        .reduce(
+          (versions, [version]) => {
+            versions[version] = 0;
+            return versions;
+          },
+          {} as { [version: string]: number }
+        );
     }
     return stats;
   }, baseStats);

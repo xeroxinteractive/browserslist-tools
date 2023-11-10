@@ -46,7 +46,7 @@ test('HTTP error', async () => {
         ok: false,
         statusText: 'Forbidden',
         status: 403,
-      } as Partial<Response> as Response)
+      }) as Partial<Response> as Response
   );
   await expect(getAnalyticsResponse(mockOptions)).rejects.toThrow(
     new ResponseError('Forbidden', 403)
@@ -69,7 +69,7 @@ test('Fetch error', async () => {
           throw mockFetchError;
         },
         ok: true,
-      } as Partial<Response> as Response)
+      }) as Partial<Response> as Response
   );
   await expect(getAnalyticsResponse(mockOptions)).rejects.toThrow(
     mockFetchError

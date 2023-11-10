@@ -20,17 +20,17 @@
   "license": "MIT",
   "type": "commonjs",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "dependencies": {
     "@types/caniuse-lite": "*",
     "@adobe/jwt-auth": "*",
     "@types/yargs": "*",
-    "browserslist": "4.21.9",
-    "caniuse-lite": "1.0.30001515",
+    "browserslist": "4.22.1",
+    "caniuse-lite": "1.0.30001549",
     "moment": "2.29.4",
-    "node-fetch": "2.6.12",
-    "ora": "6.3.1",
+    "node-fetch": "2.7.0",
+    "ora": "7.0.1",
     "semver": "7.5.4",
     "yargs": "17.7.2"
   }

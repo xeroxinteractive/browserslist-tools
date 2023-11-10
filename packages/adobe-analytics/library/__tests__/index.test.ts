@@ -62,10 +62,13 @@ describe('writeBrowserslistStats', () => {
   beforeAll(() => {
     genericStats = Object.entries(getBaseStats()).reduce(
       (browsers, [key, value]) => {
-        browsers[key] = Object.keys(value).reduce((versions, cur) => {
-          versions[cur] = expect.any(Number);
-          return versions;
-        }, {} as { [version: string]: number });
+        browsers[key] = Object.keys(value).reduce(
+          (versions, cur) => {
+            versions[cur] = expect.any(Number);
+            return versions;
+          },
+          {} as { [version: string]: number }
+        );
         return browsers;
       },
       {} as GenericStats
