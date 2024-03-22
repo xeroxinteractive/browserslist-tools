@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@types/node-fetch": "*",
-    "browserslist": "4.22.1",
+    "browserslist": "4.23.0",
     "node-fetch": "2.7.0"
   }
 }
