@@ -2578,12 +2578,12 @@
   dependencies:
     "@nx/node" "16.10.0"
 
-"@nrwl/nx-cloud@16.5.2":
-  version "16.5.2"
-  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-16.5.2.tgz#4874cb01edd48c54de2a4ca69e909c1168c98b2c"
-  integrity sha512-oHO5T1HRJsR9mbRd8eUqMBPCgqVZLSbAh3zJoPFmhEmjbM4YB9ePRpgYFT8dRNeZUOUd/8Yt7Pb6EVWOHvpD/w==
+"@nrwl/nx-cloud@18.0.1":
+  version "18.0.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx-cloud/-/nx-cloud-18.0.1.tgz#adbc7202f5e0478c14ddb9c65d3ef80f5613b65c"
+  integrity sha512-uYVxoOXf0xlWJX8O5GBWajmIeL0PfIGvfqtvVNVnl7C6FiZRbmKEhXkWxEDekI6Jq+mI1G86o7d5YsIzq6e36A==
   dependencies:
-    nx-cloud "16.5.2"
+    nx-cloud "18.0.1"
 
 "@nrwl/nx-darwin-arm64@15.9.3":
   version "15.9.3"
@@ -9167,12 +9167,12 @@ npmlog@^6.0.0, npmlog@^6.0.2:
     gauge "^4.0.3"
     set-blocking "^2.0.0"
 
-nx-cloud@16.5.2:
-  version "16.5.2"
-  resolved "https://registry.yarnpkg.com/nx-cloud/-/nx-cloud-16.5.2.tgz#edb7bfc65d0e0cae52947607aa0b44ea163bd4f3"
-  integrity sha512-1t1Ii9gojl8r/8hFGaZ/ZyYR0Cb0hzvXLCsaFuvg+EJEFdvua3P4cfNya/0bdRrm+7Eb/ITUOskbvYq4TSlyGg==
+nx-cloud@18.0.1:
+  version "18.0.1"
+  resolved "https://registry.yarnpkg.com/nx-cloud/-/nx-cloud-18.0.1.tgz#c506fd4935a391c734aafd3762d006201e447589"
+  integrity sha512-nxJfz0ZmW+DKSr8evmVVm6t1XcLn9WHR5I8kiE2BFNkLVwC+nx+MimjJ53opfHOepMqQiGJAdstZ5Ks630bJgg==
   dependencies:
-    "@nrwl/nx-cloud" "16.5.2"
+    "@nrwl/nx-cloud" "18.0.1"
     axios "1.1.3"
     chalk "^4.1.0"
     dotenv "~10.0.0"
@@ -9180,7 +9180,7 @@ nx-cloud@16.5.2:
     node-machine-id "^1.1.12"
     open "~8.4.0"
     strip-json-comments "^3.1.1"
-    tar "6.1.11"
+    tar "6.2.1"
     yargs-parser ">=21.1.1"
 
 nx@15.9.3:
@@ -11000,6 +11000,18 @@ tar@6.1.11, tar@^6.1.11, tar@^6.1.2:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
     minipass "^3.0.0"
+    minizlib "^2.1.1"
+    mkdirp "^1.0.3"
+    yallist "^4.0.0"
+
+tar@6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.2.1.tgz#717549c541bc3c2af15751bea94b1dd068d4b03a"
+  integrity sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==
+  dependencies:
+    chownr "^2.0.0"
+    fs-minipass "^2.0.0"
+    minipass "^5.0.0"
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
